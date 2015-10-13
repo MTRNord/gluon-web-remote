@@ -3,7 +3,7 @@ gluon-web-remote
 
 Web remote Administration for big size of gluon routers
 
-[![Build Status](https://travis-ci.org/MTRNord/gluon-web-remote.svg)](https://travis-ci.org/MTRNord/gluon-web-remote)
+[![Build Status](https://travis-ci.org/MTRNord/gluon-web-remote.svg?branch=develop)](https://travis-ci.org/MTRNord/gluon-web-remote)
 
 Chats
 -----
