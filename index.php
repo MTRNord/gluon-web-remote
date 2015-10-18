@@ -1,3 +1,6 @@
+<?php
+include indexClass.php;
+?>
 <!DOCTYPE html>
 <html>
 
