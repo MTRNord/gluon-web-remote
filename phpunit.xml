@@ -2,7 +2,6 @@
 
 <phpunit bootstrap="tests/bootstrap.php" colors="true" verbose="true">
     <testsuite name="mysqliLoadedTest">
-      <file>tests/mysqliLoadedTest.php</file>
-      <file>tests/mysqliMakeDB.php</file>
+      <file>tests/indexClassTest.php</file>
     </testsuite>
 </phpunit>
