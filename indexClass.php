@@ -12,36 +12,64 @@ class main {
 	# getNodes #
 	############
 	function getNodes($communityURL, $communityID){
-		//$nodes = file_get_contents($communityURL);
-		$nodes = file_get_contents("http://map.ffki.de/nodes.json");
-		//$nodes_file = fopen("nodes/nodes"+$communityID+".json", "w+") or die("Unable to open file!");
-		$nodes_file = fopen("nodes/nodesFFKI.json", "w+") or die("Unable to open file!");	
-		fwrite($nodes_file, $nodes);
-		fclose($nodes_file);
-
+		if(!empty($communityURL)){
+			if(!empty($communityID)){
+				//$nodes = file_get_contents($communityURL);
+				$nodes = file_get_contents("http://map.ffki.de/nodes.json");
+				//$nodes_file = fopen("nodes/nodes"+$communityID+".json", "w+") or die("Unable to open file!");
+				$nodes_file = fopen("nodes/nodesFFKI.json", "w+") or die("Unable to open file!");	
+				fwrite($nodes_file, $nodes);
+				fclose($nodes_file);
+			}
+		}
 	}
 
 	############
 	# parseMAC #
 	############
-	function parseMAC($nodeName, $communityID, $v6prefix){
-		main::getNodes(NULL, NULL);
+	function parseMAC($nodeName, $communityID){
+		main::getNodes();
 
 		//$nodes_string = file_get_contents("nodes/nodes"+$communityID+".json");
-		$nodes_string = file_get_contents("nodes/nodesFFKI.json");
-		$json_nodes = json_decode($string, true);
-		$nodeMAC = $json_nodes['John'][status];
+		$nodes_str = file_get_contents("nodes/nodesFFKI.json");
+		$json_nodes = json_decode($nodes_str);
+		foreach($json_nodes->nodes as $nodes){
+    		if($nodes->name == $nodeName){
+        		$nodeMAC = $nodes->id;
+    		}
+		}
+		return $nodeMAC;
+	}
 
+	##############
+	# get prefix #
+	##############
+	function getV6Prefix($communityID){
+		$communities_str = file_get_contents("nodes/communities.json");
+		$json_communities = json_decode($communities_str);
+		$prefix = $json_communities->{$communityID}->{"v6"};
+		return $prefix;
+	}
+	
+	#################
+	# generate IPv6 #
+	#################
+	function genV6($nodeName, $communityID){
+		$mac = main::parseMAC($nodeName, $communityID);
+		$prefix = main::getV6Prefix($communityID);
 		
-		return "127.0.0.1";
+		$mac_array = explode(":", $mac);
+		$host_id = ":".$mac_array[0].$mac_array[1].":".$mac_array[2]."ff:fe".$mac_array[3].":".$mac_array[4].$mac_array[5];
+		$ipv6 = $prefix."0".$host_id;
 
+		return $ipv6;
 	}
 
 	##########
 	# runSSH #
 	##########
-	function openConnection($command, $user, $password){
-		$ip = main::parseNodesFFKI();
+	function openConnection($command, $user, $password, $nodeName, $communityID){
+		$ip = main::genV6($nodeName, $communityID);
 		
 		if(helper::pingPortOnServer($ip,"22") == 1){		
 			$localhost = new Ssh\Configuration($ip);

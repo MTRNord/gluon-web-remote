@@ -72,7 +72,7 @@ include "indexClass.php";
               <h1 class="header">Welcome to the Gluon Admin</h1>
               <p>
 				<?php
-					main::openConnection();
+					main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFKI");
 				?>
 			  </p>
             </div>
