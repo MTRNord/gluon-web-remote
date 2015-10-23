@@ -1,5 +1,5 @@
 <?php
-include indexClass.php;
+include "indexClass.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,8 +24,6 @@ include indexClass.php;
 	<!-- ex inline css -->
 	<link href="css/index.css" rel="stylesheet">
 
-    <!-- jQuery -->
-    <script src="js/jquery-1.10.2.min.js"></script>
 
   </head>
   <body>
@@ -36,7 +34,7 @@ include indexClass.php;
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-3">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav" style="position: absolute;bottom: 6px;padding-left: 20px;">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav" style="position: absolute;bottom: 6px;padding-left: 20px;background-color:#dc0067;">
   Collapse Menu
 </button>
           </div>
@@ -45,7 +43,7 @@ include indexClass.php;
     </div>
     <div class="container-fluid main">
       <div class="row">
-        <nav class="col-xs-3 menu collapse" id="collapseNav">
+        <nav class="col-xs-3 menu collapse" id="collapseNav" style:"z-index:1000 !important;">
           <ul>
             <li class="active withripple" data-target="#welcome">Welcome to the Gluon Admin</li>
             <li class="withripple" data-target="#getting-started">Getting Started</li>
@@ -72,149 +70,19 @@ include indexClass.php;
           <div class="col-xs-10">
             <div class="well page active" id="welcome">
               <h1 class="header">Welcome to the Gluon Admin</h1>
-              <p></p>
+              <p>
+				<?php
+					main::openConnection();
+				?>
+			  </p>
             </div>
             <div class="well page" id="getting-started">
               <h1 class="header">Getting Started</h1>
-              <h3>Download</h3>
-              <hr>
-              <h4>Install with NPM - Coming Soon</h4>
-              <p>You can also install and manage Material Bootstrap using NPM</p>
-              <pre><code>npm install</code></pre>
-              <h4>Install with Bower</h4>
-              <p>You can also install and manage Material Bootstrap using Bower</p>
-              <pre><code>bower install bootstrap-material-design</code></pre>
-              <h4>Install with Meteor</h4>
-              <p>You can also install and manage Material Bootstrap using Meteor</p>
-              <pre><code>meteor add fezvrasta:bootstrap-material-design</code></pre>
-              <br />
-              <h3>What's included</h3>
-              <hr>
-              <p>Material Bootstrap is downloadable in a two forms. Material.css only supports the primary shades of the material color palette and Material-fullpalette.css supports every shade of the material color palette</p>
-              <div class="panel panel-info">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Required Frameworks</h3>
-                </div>
-                <div class="panel-body">
-                  <div class="list-group">
-                    <div class="list-group-item">
-                      <div class="row-action-primary">
-                        <i class="mdi-action-settings"></i>
-                      </div>
-                      <div class="row-content">
-                        <h4 class="list-group-item-heading">Bootstrap v3.0+</h4>
-                        <p class="list-group-item-text">This theme extends, styles, and modifies Bootstrap's elements and styles. Without Bootstrap this project will not display correctly. To install Bootstrap please go to <a href="http://getbootstrap.com/getting-started/" alt="Bootstrap Docs">Get Bootstrap</a></p>
-                      </div>
-                    </div>
-                    <div class="list-group-separator"></div>
-                    <div class="list-group-item">
-                      <div class="row-action-primary">
-                        <i class="mdi-action-settings"></i>
-                      </div>
-                      <div class="row-content">
-                        <h4 class="list-group-item-heading">jQuery 1.9.1+</h4>
-                        <p class="list-group-item-text">All JavaScript plugins require jQuery to be included.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Material Bootstrap. You'll see something like this:</p>
-              <!-- This code must be aligned this way to render correctly -->
-              <pre><code class="language-bash" data-lang="bash">Material/
-├── css/
-│   ├── material.css
-│   ├── material.css.map
-│   ├── material.min.css
-│   ├── material.min.css.map
-│   ├── material-wfont.css
-│   ├── material-wfont.css.map
-│   ├── material-wfont.min.css
-│   ├── material-wfont.min.css.map
-│   ├── ripples
-│   ├── ripples.css.map
-│   ├── ripples.min.css
-│   ├── ripples.min.css.map
-├── js/
-│   ├── material.js
-│   ├── material.min.js
-│   ├── material.min.js.map
-│   ├── ripples.js
-│   ├── ripples.min.js
-│   ├── ripples.min.js.map
-└── fonts/
-    ├── Material-Design-Icons.eot
-    ├── Material-Design-Icons.svg
-    ├── Material-Design-Icons.ttf
-    ├── Material-Design-Icons.woff
-    └── ADD REMAINING GOOGLE FONT FILES HERE
-                </code>
-              </pre>
-              <p>Just copy the compiled CSS and JS files and the font files from the .zip and add them to your site.</p>
-              <br />
-              <p>Once copied you need to initialize the material javascript by adding the following javascript to your site,</p>
-              <pre><code>$.material.init()</code></pre>
+			  <p></p>
             </div>
             <div class="well page" id="checkbox">
               <h1 class="header">Checkbox</h1>
-
-              <!-- Simple checkbox with label -->
-              <div class="sample1">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Notifications
-                  </label>
-                </div>
-                <p class="hint">Notify me about updates to apps or games that I've downloaded</p>
-              </div>
-
-              <!-- Simple checkbox with label, checked -->
-              <div class="sample1">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" checked> Auto-updates
-                  </label>
-                </div>
-                <p class="hint">Auto-update apps over wifi only</p>
-              </div>
-
-              <!-- Simple checkbox with label -->
-              <div class="sample1">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Clear search history
-                  </label>
-                </div>
-                <p class="hint">Remove all the searches you have ever performed</p>
-              </div>
-
-              <h2>Sound</h2>
-
-              <!-- Checkboxes with labels on the left -->
-              <div class="sample2">
-                <div class="text">Touch sounds</div>
-                <div class="checkbox checkbox-primary">
-                  <label>
-                    <input type="checkbox" checked>
-                  </label>
-                </div>
-              </div>
-              <div class="sample2">
-                <div class="text">Screen lock sound</div>
-                <div class="checkbox checkbox-primary">
-                  <label>
-                    <input type="checkbox">
-                  </label>
-                </div>
-              </div>
-              <div class="sample2">
-                <div class="text">Vibrate on touch</div>
-                <div class="checkbox checkbox-primary">
-                  <label>
-                    <input type="checkbox">
-                  </label>
-                </div>
-              </div>
+			  <p></p>
             </div>
             <div class="well page" id="radio-button">
               <h1 class="header">Checkbox</h1>
@@ -1068,6 +936,9 @@ include indexClass.php;
       </div>
     </div>
 
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.10.2.min.js"></script>
 
     <!-- Open source code -->
     <script>
