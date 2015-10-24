@@ -16,12 +16,10 @@ before_script:
   - sudo apt-get install -y -qq libssh2-1-dev libssh2-php
   - pecl install -f ssh2-beta < libs/php-ssh/.noninteractive
   - php -m | grep ssh2
-  - ls -la
   - cd libs/php-ssh
   - composer self-update
   - composer install --dev
   - cd ../..
-  - ls -la
   - echo `whoami`":1234" | sudo chpasswd
 #RunTests
 script: 
