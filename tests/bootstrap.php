@@ -2,7 +2,7 @@
 include_once('AutoLoader.php');
 AutoLoader::registerDirectory('tests');
 
-$filename = __DIR__.'/libs/php-ssh/vendor/autoload.php';
+$filename = __DIR__.'/../libs/php-ssh/vendor/autoload.php';
 
 if (!file_exists($filename)) {
     echo 'You must first install the vendors using composer.'.PHP_EOL;
