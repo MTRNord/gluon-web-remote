@@ -19,7 +19,7 @@ class main {
 
 			$nodes = file_get_contents($communityURL);
 			//$nodes = file_get_contents("http://map.ffki.de/nodes.json");
-			$nodes_file = fopen("nodes/nodes"+$communityID+".json", "w+") or die("Unable to open file!");
+			$nodes_file = fopen("nodes/nodes".$communityID.".json", "w+") or die("Unable to open file!");
 			//$nodes_file = fopen("nodes/nodesFFKI.json", "w+") or die("Unable to open file!");	
 			fwrite($nodes_file, $nodes);
 			fclose($nodes_file);
@@ -32,8 +32,8 @@ class main {
 	function parseMAC($nodeName, $communityID){
 		main::getNodes($communityID);
 
-		//$nodes_string = file_get_contents("nodes/nodes"+$communityID+".json");
-		$nodes_str = file_get_contents("nodes/nodesFFKI.json");
+		$nodes_string = file_get_contents("nodes/nodes".$communityID.".json");
+		//$nodes_str = file_get_contents("nodes/nodesFFKI.json");
 		$json_nodes = json_decode($nodes_str);
 		foreach($json_nodes->nodes as $nodes){
     		if($nodes->name == $nodeName){
@@ -61,8 +61,12 @@ class main {
 		$prefix = main::getV6Prefix($communityID);
 		
 		$mac_array = explode(":", $mac);
-		$host_id = ":".$mac_array[0].$mac_array[1].":".$mac_array[2]."ff:fe".$mac_array[3].":".$mac_array[4].$mac_array[5];
-		$ipv6 = $prefix."0".$host_id;
+		if(!empty($mac)){
+			if(!empty($prefix)){
+				$host_id = ":".$mac_array[0].$mac_array[1].":".$mac_array[2]."ff:fe".$mac_array[3].":".$mac_array[4].$mac_array[5];
+				$ipv6 = $prefix."0".$host_id;
+			}
+		}
 
 		return $ipv6;
 	}
@@ -73,8 +77,8 @@ class main {
 	function openConnection($command, $user, $password, $nodeName, $communityID){
 		$ip = main::genV6($nodeName, $communityID);
 		
-		if(helper::pingPortOnServer($ip,"22") == 1){		
-			$localhost = new Ssh\Configuration($ip);
+		if(helper::pingPortOnServer("[".$ip."]","22") == 1){		
+			$localhost = new Ssh\Configuration("[".$ip."]");
 			$authentication = new Ssh\Authentication\Password($user, $password);		
 			$session = new Ssh\Session($ssh, $authentication);
 			$exec = $session->getExec();

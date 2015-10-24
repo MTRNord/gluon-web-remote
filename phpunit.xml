@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="tests/bootstrap.php" colors="true" verbose="true">
-    <testsuite name="mysqliLoadedTest">
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+		 bootstrap="tests/bootstrap.php"
+		 verbose="true"
+>
+    <testsuite name="Main Tests">
       <file>tests/indexClassTest.php</file>
     </testsuite>
+
+	    <testsuites>
+        <testsuite name="SSH Library Test Suite">
+            <directory>libs/php-ssh/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>libs/php-ssh/src/Ssh</directory>
+        </whitelist>
+    </filter>
+
+    <groups>
+        <exclude>
+            <group>functional</group>
+        </exclude>
+    </groups>
 </phpunit>
