@@ -19,7 +19,7 @@ before_script:
   - cd libs/php-ssh
   - composer self-update
   - composer install --dev
-  - cd
+  - cd ../..
   - echo `whoami`":1234" | sudo chpasswd
 #RunTests
 script: 
