@@ -59,7 +59,7 @@ include "indexClass.php";
             <div class="well page" id="tests">
               <h1 class="header">Tests</h1>
 			  <p>
-			    Just testing <br/>
+			    <b>Just testing</b> <br/>
 			    <?php
 					main::openConnection("ls -la", "root", "xxxx", "Angeln0009", "FFFL");
 				?>
