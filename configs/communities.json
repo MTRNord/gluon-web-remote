@@ -22,5 +22,13 @@
 		"v6mask": "/64",
 		"v4": "10.187.0.0",
 		"v4mask": "/16"
+	},
+	"FFHL": {
+		"name": "Freifunk Lübeck",
+		"nodesURL": "https://map.luebeck.freifunk.net/data/nodes.json",
+		"v6": "fdef:ffc0:3dd7:",
+		"v6mask": "/64",
+		"v4": "10.130.0.0",
+		"v4mask": "/20"
 	}
 }
