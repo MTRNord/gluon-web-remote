@@ -13,14 +13,12 @@ class main {
 	############
 	function getNodes($communityID){
 		if(!empty($communityID)){
-			$communities_str = file_get_contents("nodes/communities.json");
+			$communities_str = file_get_contents("configs/communities.json");
 			$json_communities = json_decode($communities_str);
 			$communityURL = $json_communities->{$communityID}->{"nodesURL"};
 
 			$nodes = file_get_contents($communityURL);
-			//$nodes = file_get_contents("http://map.ffki.de/nodes.json");
 			$nodes_file = fopen("nodes/nodes".$communityID.".json", "w+") or die("Unable to open file!");
-			//$nodes_file = fopen("nodes/nodesFFKI.json", "w+") or die("Unable to open file!");	
 			fwrite($nodes_file, $nodes);
 			fclose($nodes_file);
 		}
@@ -33,7 +31,6 @@ class main {
 		main::getNodes($communityID);
 
 		$nodes_string = file_get_contents("nodes/nodes".$communityID.".json");
-		//$nodes_str = file_get_contents("nodes/nodesFFKI.json");
 		$json_nodes = json_decode($nodes_str);
 		foreach($json_nodes->nodes as $nodes){
     		if($nodes->name == $nodeName){
