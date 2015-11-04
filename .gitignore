@@ -1,3 +1,6 @@
 upload.sh
 *~
 phpinfo.php
+nodes/nodeFFFL.json
+nodes/nodeFFKI.json
+nodes/nodeFFKI_schoen.json
