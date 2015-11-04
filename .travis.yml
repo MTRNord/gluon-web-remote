@@ -12,8 +12,19 @@ matrix:
 before_script:
   - wget https://phar.phpunit.de/phpunit.phar
   - chmod +x phpunit.phar
+  - sudo apt-get update -qq
+  - sudo apt-get install -y -qq libssh2-1-dev libssh2-php
+  - pecl install -f ssh2-beta < libs/php-ssh/.noninteractive
+  - php -m | grep ssh2
+  - cd libs/php-ssh
+  - composer self-update
+  - composer install --dev
+  - cd ../..
+  - echo `whoami`":1234" | sudo chpasswd
 #RunTests
-script: php phpunit.phar --configuration phpunit.xml --verbose
+script: 
+  - php phpunit.phar --configuration phpunit.xml --verbose --coverage-text
+  - php phpunit.phar --configuration phpunit.xml --verbose --group functional
 #Webhook for Gitter
 notifications:
   webhooks:
