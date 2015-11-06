@@ -13,5 +13,5 @@ Chats
 Requires
 --------
 
-- PHP 5.5+
+- PHP 5.6+ (PHP 7 currently NOT supported)
 - MYSQL Server
