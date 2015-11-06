@@ -14,3 +14,4 @@ Requires
 --------
 
 - PHP 5.5+
+- MYSQL Server
