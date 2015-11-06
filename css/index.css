@@ -21,8 +21,8 @@
 }
 .menu {
 	position:fixed !important;
-	width:27%;
-	height:75%;
+	width:27% !important;
+	height:75% !important;
 	overflow: auto !important;
 	padding: 0 !important;
 }

@@ -1,5 +1,6 @@
 <?php
-include "indexClass.php";
+require "indexClass.php";
+require 'libs/login-base/vendor/autoload.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,6 +55,10 @@ include "indexClass.php";
             <div class="well page active" id="welcome">
               <h1 class="header">Welcome to the Gluon Admin</h1>
               <p>
+                <?php
+                    // start login application
+                    new Application();
+                ?>
 			  </p>
             </div>
             <div class="well page" id="tests">
@@ -61,7 +66,7 @@ include "indexClass.php";
 			  <p>
 			    <b>Just testing</b> <br/>
 			    <?php
-					main::openConnection("ls -la", "root", "xxxx", "Angeln0009", "FFFL");
+					main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFKI");
 				?>
 			  </p>
             </div>
@@ -92,6 +97,7 @@ include "indexClass.php";
 
     <!-- jQuery -->
     <script src="js/jquery-1.10.2.min.js"></script>
+
 
     <!-- Open source code -->
     <script>
@@ -175,33 +181,6 @@ include "indexClass.php";
     <script src="js/ripples.min.js"></script>
     <script>
       $.material.init();
-    </script>
-
-
-    <!-- Sliders -->
-    <script src="js/jquery.nouislider.min.js"></script>
-    <script>
-      $(function() {
-        $.material.init();
-        $(".shor").noUiSlider({
-          start: 40,
-          connect: "lower",
-          range: {
-            min: 0,
-            max: 100
-          }
-        });
-
-        $(".svert").noUiSlider({
-          orientation: "vertical",
-          start: 40,
-          connect: "lower",
-          range: {
-            min: 0,
-            max: 100
-          }
-        });
-      });
     </script>
 
     <!-- Dropdown.js -->

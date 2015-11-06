@@ -11,7 +11,7 @@ class main {
 	############
 	# getNodes #
 	############
-	function getNodes($communityID){
+	public static function getNodes($communityID){
 		if(!empty($communityID)){
 			$communities_str = file_get_contents("configs/communities.json");
 			$json_communities = json_decode($communities_str);
@@ -21,30 +21,38 @@ class main {
 			$nodes_file = fopen("nodes/nodes".$communityID.".json", "w+") or die("Unable to open file!");
 			fwrite($nodes_file, $nodes);
 			fclose($nodes_file);
+		}else {
+		    echo "<b>ERROR!!!!!! | Missing $communityID </b>";
 		}
 	}
 
 	############
 	# parseMAC #
 	############
-	function parseMAC($nodeName, $communityID){
+	public static function parseMAC($nodeName, $communityID){
 		main::getNodes($communityID);
-
-		$nodes_string = file_get_contents("nodes/nodes".$communityID.".json");
-		$json_nodes = json_decode($nodes_str);
-		foreach($json_nodes->nodes as $nodes){
-    		if($nodes->name == $nodeName){
-        		$nodeMAC = $nodes->id;
-    		}
-		}
-		return $nodeMAC;
+        $communities_str = file_get_contents("configs/communities.json");
+		$json_communities = json_decode($communities_str);
+        if ($json_communities->$communityID->supported == 1) {
+            $nodes_str = file_get_contents("nodes/nodes".$communityID.".json");
+		    $json_nodes = json_decode($nodes_str);
+		    foreach($json_nodes->nodes as $nodes){
+    		    if($nodes->name == $nodeName){
+        		    $nodeMAC = $nodes->id;
+    		    }
+		    }
+		    return $nodeMAC;
+        }else{
+            echo "<b> This Community is not yet supported!!";
+        }
+		
 	}
 
 	##############
 	# get prefix #
 	##############
-	function getV6Prefix($communityID){
-		$communities_str = file_get_contents("nodes/communities.json");
+	public static function getV6Prefix($communityID){
+		$communities_str = file_get_contents("configs/communities.json");
 		$json_communities = json_decode($communities_str);
 		$prefix = $json_communities->{$communityID}->{"v6"};
 		return $prefix;
@@ -53,7 +61,7 @@ class main {
 	#################
 	# generate IPv6 #
 	#################
-	function genV6($nodeName, $communityID){
+	public static function genV6($nodeName, $communityID){
 		$mac = main::parseMAC($nodeName, $communityID);
 		$prefix = main::getV6Prefix($communityID);
 		
@@ -64,23 +72,27 @@ class main {
 				$ipv6 = $prefix."0".$host_id;
 			}
 		}
-
-		return $ipv6;
+        if(!empty($ipv6)){
+            return $ipv6;
+		}
+		
 	}
 
 	##########
 	# runSSH #
 	##########
-	function openConnection($command, $user, $password, $nodeName, $communityID){
+	public static function openConnection($command, $user, $password, $nodeName, $communityID){
 		$ip = main::genV6($nodeName, $communityID);
 		
-		if(helper::pingPortOnServer("[".$ip."]","22") == 1){		
-			$localhost = new Ssh\Configuration("[".$ip."]");
-			$authentication = new Ssh\Authentication\Password($user, $password);		
-			$session = new Ssh\Session($ssh, $authentication);
-			$exec = $session->getExec();
-			echo $exec->run($command);
-		}else{echo "ERROR!!! SSH IS NOT RUNNING ON ROUTER!!!";}
+		if(!empty($ip)){
+		    if(helper::pingPortOnServer("[".$ip."]","22") == 1){		
+			    $localhost = new Ssh\Configuration("[".$ip."]");
+			    $authentication = new Ssh\Authentication\Password($user, $password);		
+			    $session = new Ssh\Session($ssh, $authentication);
+			    $exec = $session->getExec();
+			    echo $exec->run($command);
+		    }else{echo "ERROR!!! SSH IS NOT RUNNING ON ROUTER!!!";}
+		}
 	}
 
 }
@@ -95,7 +107,7 @@ class helper{
 	########################
 	# Check for SSH-Server #
 	########################
-	function pingPortOnServer($ip,$port){
+	public static function pingPortOnServer($ip,$port){
 		$waitTimeoutInSeconds = 1; 
 		if($fp = fsockopen($ip,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
 		   return 1;
