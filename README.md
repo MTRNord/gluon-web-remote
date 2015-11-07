@@ -12,7 +12,7 @@ Chats
 
 TODO
 ----
--Add View Manager
+- Add View Manager
 
 Requires
 --------
