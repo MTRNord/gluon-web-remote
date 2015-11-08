@@ -9,3 +9,13 @@ Chats
 -----
 
 [![Join the chat at https://gitter.im/MTRNord/gluon-web-remote](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MTRNord/gluon-web-remote?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+TODO
+----
+- Add View Manager
+
+Requires
+--------
+
+- PHP 5.6+ (PHP 7 currently NOT supported)
+- MYSQL Server
