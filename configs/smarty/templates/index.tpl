@@ -1,5 +1,6 @@
 {include_php file='indexClass.php'}
 {include_php file='libs/login-base/vendor/autoload.php'}
+{config_load file='index.conf'}
 <!DOCTYPE html>
 <html>
 
@@ -44,7 +45,7 @@
       <div class="row">
         <nav class="col-xs-3 menu collapse" id="collapseNav" style:"z-index:1000 !important;">
           <ul>
-            <li class="active withripple" data-target="#welcome">Welcome to the Gluon Admin</li>
+            <li class="active withripple" data-target="#welcome">{#welcomeHead#}</li>
             <li class="withripple" data-target="#tests">Tests</li>
             <li class="withripple" data-target="#login">Login</li>
           </ul>
@@ -52,11 +53,11 @@
         <div class="pages col-xs-9">
           <div class="col-xs-10">
             <div class="well page active" id="welcome">
-              <h1 class="header">Welcome to the Gluon Admin</h1>
+              <h1 class="header">{#welcomeHead#}</h1>
               <p>
                 <!-- TODO Add View -->
-                <h3>What can I do here?</h3>
-                
+                <h3>{#abilitysHead#}</h3>
+                <p>{#abilitys#}</p>
 			  </p>
             </div>
             <div class="well page" id="tests">

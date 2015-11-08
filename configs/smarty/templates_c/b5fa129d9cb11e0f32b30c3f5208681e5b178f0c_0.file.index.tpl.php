@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-07 23:43:51
+<?php /* Smarty version 3.1.27, created on 2015-11-08 19:52:41
          compiled from "configs/smarty/templates/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:642313994563e8cb7d0a862_10621147%%*/
+/*%%SmartyHeaderCode:248170660563fa809684890_57405724%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5fa129d9cb11e0f32b30c3f5208681e5b178f0c' => 
     array (
       0 => 'configs/smarty/templates/index.tpl',
-      1 => 1446939829,
+      1 => 1447012355,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '642313994563e8cb7d0a862_10621147',
+  'nocache_hash' => '248170660563fa809684890_57405724',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_563e8cb7d296b8_09418245',
+  'unifunc' => 'content_563fa8096a6911_34960372',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_563e8cb7d296b8_09418245')) {
-function content_563e8cb7d296b8_09418245 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563fa8096a6911_34960372')) {
+function content_563fa8096a6911_34960372 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '642313994563e8cb7d0a862_10621147';
+$_smarty_tpl->properties['nocache_hash'] = '248170660563fa809684890_57405724';
 include_once ('indexClass.php');?>
 
 <?php include_once ('libs/login-base/vendor/autoload.php');?>
 
+<?php  Smarty_Internal_Extension_Config::configLoad($_smarty_tpl, 'index.conf', null, 'local');?>
 <!DOCTYPE html>
 <html>
 
@@ -71,7 +72,8 @@ include_once ('indexClass.php');?>
       <div class="row">
         <nav class="col-xs-3 menu collapse" id="collapseNav" style:"z-index:1000 !important;">
           <ul>
-            <li class="active withripple" data-target="#welcome">Welcome to the Gluon Admin</li>
+            <li class="active withripple" data-target="#welcome"><?php echo $_smarty_tpl->getConfigVariable( 'welcomeHead');?>
+</li>
             <li class="withripple" data-target="#tests">Tests</li>
             <li class="withripple" data-target="#login">Login</li>
           </ul>
@@ -79,11 +81,14 @@ include_once ('indexClass.php');?>
         <div class="pages col-xs-9">
           <div class="col-xs-10">
             <div class="well page active" id="welcome">
-              <h1 class="header">Welcome to the Gluon Admin</h1>
+              <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'welcomeHead');?>
+</h1>
               <p>
                 <!-- TODO Add View -->
-                <h3>What can I do here?</h3>
-                
+                <h3><?php echo $_smarty_tpl->getConfigVariable( 'abilitysHead');?>
+</h3>
+                <p><?php echo $_smarty_tpl->getConfigVariable( 'abilitys');?>
+</p>
 			  </p>
             </div>
             <div class="well page" id="tests">
