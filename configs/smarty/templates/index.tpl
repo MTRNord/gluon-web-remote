@@ -35,7 +35,7 @@
         <div class="row">
           <div class="col-xs-3">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav" style="position: absolute;bottom: 6px;padding-left: 20px;background-color:#dc0067;">
-  Collapse Menu
+  {#collapseMenu#}
 </button>
           </div>
         </div>
@@ -54,11 +54,9 @@
           <div class="col-xs-10">
             <div class="well page active" id="welcome">
               <h1 class="header">{#welcomeHead#}</h1>
-              <p>
-                <!-- TODO Add View -->
+                
                 <h3>{#abilitysHead#}</h3>
                 <p>{#abilitys#}</p>
-			  </p>
             </div>
             <div class="well page" id="tests">
               <h1 class="header">Tests</h1>
