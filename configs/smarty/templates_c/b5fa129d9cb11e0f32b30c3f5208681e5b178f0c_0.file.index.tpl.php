@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-08 19:52:41
+<?php /* Smarty version 3.1.27, created on 2015-11-08 20:31:20
          compiled from "configs/smarty/templates/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:248170660563fa809684890_57405724%%*/
+/*%%SmartyHeaderCode:1443390499563fb1184a9e11_47678132%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5fa129d9cb11e0f32b30c3f5208681e5b178f0c' => 
     array (
       0 => 'configs/smarty/templates/index.tpl',
-      1 => 1447012355,
+      1 => 1447014601,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '248170660563fa809684890_57405724',
+  'nocache_hash' => '1443390499563fb1184a9e11_47678132',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_563fa8096a6911_34960372',
+  'unifunc' => 'content_563fb1184c36b3_35332039',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_563fa8096a6911_34960372')) {
-function content_563fa8096a6911_34960372 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563fb1184c36b3_35332039')) {
+function content_563fb1184c36b3_35332039 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '248170660563fa809684890_57405724';
+$_smarty_tpl->properties['nocache_hash'] = '1443390499563fb1184a9e11_47678132';
 include_once ('indexClass.php');?>
 
 <?php include_once ('libs/login-base/vendor/autoload.php');?>
@@ -62,7 +62,8 @@ include_once ('indexClass.php');?>
         <div class="row">
           <div class="col-xs-3">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav" style="position: absolute;bottom: 6px;padding-left: 20px;background-color:#dc0067;">
-  Collapse Menu
+  <?php echo $_smarty_tpl->getConfigVariable( 'collapseMenu');?>
+
 </button>
           </div>
         </div>
@@ -83,13 +84,11 @@ include_once ('indexClass.php');?>
             <div class="well page active" id="welcome">
               <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'welcomeHead');?>
 </h1>
-              <p>
-                <!-- TODO Add View -->
+                
                 <h3><?php echo $_smarty_tpl->getConfigVariable( 'abilitysHead');?>
 </h3>
                 <p><?php echo $_smarty_tpl->getConfigVariable( 'abilitys');?>
 </p>
-			  </p>
             </div>
             <div class="well page" id="tests">
               <h1 class="header">Tests</h1>
