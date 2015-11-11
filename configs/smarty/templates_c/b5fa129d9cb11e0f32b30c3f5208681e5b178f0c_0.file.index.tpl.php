@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-08 20:31:20
+<?php /* Smarty version 3.1.27, created on 2015-11-09 18:18:25
          compiled from "configs/smarty/templates/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1443390499563fb1184a9e11_47678132%%*/
+/*%%SmartyHeaderCode:4118014745640e371a07678_11293514%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5fa129d9cb11e0f32b30c3f5208681e5b178f0c' => 
     array (
       0 => 'configs/smarty/templates/index.tpl',
-      1 => 1447014601,
+      1 => 1447093045,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1443390499563fb1184a9e11_47678132',
+  'nocache_hash' => '4118014745640e371a07678_11293514',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_563fb1184c36b3_35332039',
+  'unifunc' => 'content_5640e371a2c894_60814898',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_563fb1184c36b3_35332039')) {
-function content_563fb1184c36b3_35332039 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5640e371a2c894_60814898')) {
+function content_5640e371a2c894_60814898 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1443390499563fb1184a9e11_47678132';
+$_smarty_tpl->properties['nocache_hash'] = '4118014745640e371a07678_11293514';
 include_once ('indexClass.php');?>
 
 <?php include_once ('libs/login-base/vendor/autoload.php');?>
@@ -76,7 +76,8 @@ include_once ('indexClass.php');?>
             <li class="active withripple" data-target="#welcome"><?php echo $_smarty_tpl->getConfigVariable( 'welcomeHead');?>
 </li>
             <li class="withripple" data-target="#tests">Tests</li>
-            <li class="withripple" data-target="#login">Login</li>
+            <li class="withripple" data-target="#login"><?php echo $_smarty_tpl->getConfigVariable( 'login');?>
+</li>
           </ul>
         </nav>
         <div class="pages col-xs-9">
@@ -100,7 +101,8 @@ include_once ('indexClass.php');?>
 			  </p>
             </div>
             <div class="well page" id="login">
-                <h1 class="header">Login</h1>
+                <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'login');?>
+</h1>
                 <?php 
                     // start login application
                     new Application();

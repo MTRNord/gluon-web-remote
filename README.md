@@ -12,7 +12,10 @@ Chats
 
 TODO
 ----
-- Add View Manager
+- Set all view-manager Vars
+- Fix Administration/Login
+- Add ability to auto install gateways on servers with the puppet script from hamburg and kiel (only in Ubuntu Server yet)
+- Add Router Config mode
 
 Requires
 --------
