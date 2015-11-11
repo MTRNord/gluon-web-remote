@@ -47,7 +47,7 @@
           <ul>
             <li class="active withripple" data-target="#welcome">{#welcomeHead#}</li>
             <li class="withripple" data-target="#tests">Tests</li>
-            <li class="withripple" data-target="#login">Login</li>
+            <li class="withripple" data-target="#login">{#login#}</li>
           </ul>
         </nav>
         <div class="pages col-xs-9">
@@ -68,7 +68,7 @@
 			  </p>
             </div>
             <div class="well page" id="login">
-                <h1 class="header">Login</h1>
+                <h1 class="header">{#login#}</h1>
                 {php}
                     // start login application
                     new Application();

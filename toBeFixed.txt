@@ -1,2 +1,0 @@
-index.php line 135
-          $(".pages").animate({scrollTop:0}, 0);
