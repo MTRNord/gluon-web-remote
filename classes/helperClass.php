@@ -34,6 +34,7 @@ class helper {
             $nodes_str = file_get_contents("nodes/nodes".$communityID.".json");
 		    $json_nodes = json_decode($nodes_str);
 		        foreach($json_nodes->nodes as $nodes){
+		            //TODO Add Handler for Netmon
 		            if(!empty($nodes->name)){
 		                if($nodes->flags->online == "true"){
                             echo "<option value=\"".$nodes->name."\">".$nodes->name."</option>\n";
