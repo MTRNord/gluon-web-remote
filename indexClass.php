@@ -129,7 +129,7 @@ class helper{
 		    $json_nodes = json_decode($nodes_str);
 		    foreach($json_nodes->nodes as $nodes){
 		        if(!empty($nodes->name)){
-                    echo "<option value=\"".$nodes->name."\">".$nodes->name."</option>";
+                    echo "<option value=\"".$nodes->name."\">".$nodes->name."</option>\n";
 		        }else{};
 		    }
 		    return 1;
