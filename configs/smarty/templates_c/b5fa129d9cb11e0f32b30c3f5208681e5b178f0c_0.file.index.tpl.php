@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-17 17:33:26
+<?php /* Smarty version 3.1.27, created on 2015-11-17 19:55:27
          compiled from "configs/smarty/templates/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:2068227855564b64e6d2f7b6_10308823%%*/
+/*%%SmartyHeaderCode:756661569564b862fb744b4_58278763%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5fa129d9cb11e0f32b30c3f5208681e5b178f0c' => 
     array (
       0 => 'configs/smarty/templates/index.tpl',
-      1 => 1447781600,
+      1 => 1447789965,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2068227855564b64e6d2f7b6_10308823',
+  'nocache_hash' => '756661569564b862fb744b4_58278763',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_564b64e6d4c1d9_09435161',
+  'unifunc' => 'content_564b862fbe2e70_56187141',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_564b64e6d4c1d9_09435161')) {
-function content_564b64e6d4c1d9_09435161 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564b862fbe2e70_56187141')) {
+function content_564b862fbe2e70_56187141 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '2068227855564b64e6d2f7b6_10308823';
+$_smarty_tpl->properties['nocache_hash'] = '756661569564b862fb744b4_58278763';
 include_once ('classes/indexClass.php');?>
 
 <?php include_once ('libs/login-base/vendor/autoload.php');?>
@@ -65,6 +65,8 @@ include_once ('classes/indexClass.php');?>
             <li class="withripple" data-target="#tests">Tests</li>
             <li class="withripple" data-target="#addRouter"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
 </li>
+            <li hidden class="withripple" data-target="#addRouter2"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
+</li>
             <li class="withripple" data-target="#login"><?php echo $_smarty_tpl->getConfigVariable( 'login');?>
 </li>
           </ul>
@@ -85,7 +87,7 @@ include_once ('classes/indexClass.php');?>
 			  <p>
 			    <b>Just testing</b> <br/>
 			    <?php 
-					main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFKI");
+					main::openConnection("ls -la", "root", "xxxx", "Sylt_1", "FFFL");
 				?>
 			  </p>
             </div>
@@ -97,13 +99,12 @@ include_once ('classes/indexClass.php');?>
                     new Application();
                 ?>
             </div>
-            <div class="well page" id="addRouter">
-                <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
-</h1>
-                <?php echo $_smarty_tpl->getSubTemplate ("./managing/addRouter/addRouter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+            <?php echo $_smarty_tpl->getSubTemplate ("./managing/addRouter/selectCommunity.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
-            </div>
+            <?php echo $_smarty_tpl->getSubTemplate ("./managing/addRouter/addRouter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
           </div>
           <div class="col-xs-2">
             <button class="btn btn-fab btn-material-grey-200" id="opensource"><i class="mdi-action-open-in-new"></i></button></div>
@@ -137,7 +138,6 @@ include_once ('classes/indexClass.php');?>
 <?php echo '<script'; ?>
  async type="text/javascript">
   window.page = window.location.hash || "#welcome";
-
   $(document).ready(function() {
     if (window.page != "#welcome") {
       $(".menu").find("li[data-target=" + window.page + "]").trigger("click");

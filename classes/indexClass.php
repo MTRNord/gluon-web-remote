@@ -15,14 +15,16 @@ class main {
 		if(!empty($communityID)){
 			$communities_str = file_get_contents("configs/communities.json");
 			$json_communities = json_decode($communities_str);
-			$communityURL = $json_communities->{$communityID}->{"nodesURL"};
+			$communityURL = $json_communities->communities->{$communityID}->{"nodesURL"};
 
 			$nodes = file_get_contents($communityURL);
 			$nodes_file = fopen("nodes/nodes".$communityID.".json", "w+") or die("Unable to open file!");
 			fwrite($nodes_file, $nodes);
 			fclose($nodes_file);
+			return 1;
 		}else {
 		    echo "<b>ERROR!!!!!! | Missing $communityID </b>";
+		    return 0;
 		}
 	}
 
@@ -33,13 +35,19 @@ class main {
 		main::getNodes($communityID);
         $communities_str = file_get_contents("configs/communities.json");
 		$json_communities = json_decode($communities_str);
-        if ($json_communities->$communityID->supported == 1) {
+        if ($json_communities->communities->$communityID->supported == 1) {
             $nodes_str = file_get_contents("nodes/nodes".$communityID.".json");
 		    $json_nodes = json_decode($nodes_str);
 		    foreach($json_nodes->nodes as $nodes){
-    		    if($nodes->name == $nodeName){
-        		    $nodeMAC = $nodes->id;
-    		    }
+		        if(!empty($nodes->id)){
+    		        if($nodes->name == $nodeName){
+        		        $nodeMAC = $nodes->id;
+    		        }else{}
+		        }else{
+		            if($nodes->nodeinfo->hostname == $nodeName){
+        		        $nodeMAC = $nodes->nodeinfo->network->mac;
+    		        }else{}
+		        }
 		    }
 		    return $nodeMAC;
         }else{
@@ -54,7 +62,7 @@ class main {
 	public static function getV6Prefix($communityID){
 		$communities_str = file_get_contents("configs/communities.json");
 		$json_communities = json_decode($communities_str);
-		$prefix = $json_communities->{$communityID}->{"v6"};
+		$prefix = $json_communities->communities->{$communityID}->{"v6"};
 		return $prefix;
 	}
 	
@@ -83,7 +91,6 @@ class main {
 	##########
 	public static function openConnection($command, $user, $password, $nodeName, $communityID){
 		$ip = main::genV6($nodeName, $communityID);
-		
 		if(!empty($ip)){
 		    if(helper::pingPortOnServer("[".$ip."]","22") == 1){		
 			    $localhost = new Ssh\Configuration("[".$ip."]");
@@ -96,5 +103,5 @@ class main {
 	}
 
 }
-include "classes/helper.php";
+include "classes/helperClass.php";
 ?>

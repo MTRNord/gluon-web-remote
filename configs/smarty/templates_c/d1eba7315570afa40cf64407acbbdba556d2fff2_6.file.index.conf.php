@@ -1,4 +1,4 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-17 17:33:29
+<?php /* Smarty version 3.1.27, created on 2015-11-17 19:58:01
          compiled from "configs/smarty/de_DE/index.conf" */ ?>
 <?php
 /*%%SmartyHeaderCode:%%*/
@@ -9,18 +9,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd1eba7315570afa40cf64407acbbdba556d2fff2' => 
     array (
       0 => 'index.conf',
-      1 => 1447778619,
+      1 => 1447787231,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_564b64e9c19200_56204508',
+  'unifunc' => 'content_564b86c9eb2516_53628060',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_564b64e9c19200_56204508')) {
-function content_564b64e9c19200_56204508 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564b86c9eb2516_53628060')) {
+function content_564b86c9eb2516_53628060 ($_smarty_tpl) {
 
 Smarty_Internal_Extension_Config::loadConfigVars($_smarty_tpl, array (
   'sections' => 
@@ -29,12 +29,15 @@ Smarty_Internal_Extension_Config::loadConfigVars($_smarty_tpl, array (
   'vars' => 
   array (
     'collapseMenu' => 'Menü umschalten',
+    'nextPage' => 'Nächste Seite',
+    'shouldNotBeHere' => 'Du sollltest diese Seite garnicht sehen :(',
     'welcomeHead' => 'Willkommen zum Gluon Admin Panel',
     'abilitysHead' => 'Was kann ich hiermit machen?',
     'abilitys' => 'Dies ist ein Beispiel-Text',
     'login' => 'Anmeldung',
     'addRouter' => 'Router hinzufügen',
-    'routername' => 'Router Name',
+    'routerName' => 'Router Name',
+    'communityName' => ' Community Name',
   ),
 ));
 }

@@ -35,6 +35,7 @@
             <li class="active withripple" data-target="#welcome">{#welcomeHead#}</li>
             <li class="withripple" data-target="#tests">Tests</li>
             <li class="withripple" data-target="#addRouter">{#addRouter#}</li>
+            <li hidden class="withripple" data-target="#addRouter2">{#addRouter#}</li>
             <li class="withripple" data-target="#login">{#login#}</li>
           </ul>
         </nav>
@@ -51,7 +52,7 @@
 			  <p>
 			    <b>Just testing</b> <br/>
 			    {php}
-					main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFKI");
+					main::openConnection("ls -la", "root", "xxxx", "Sylt_1", "FFFL");
 				{/php}
 			  </p>
             </div>
@@ -62,10 +63,8 @@
                     new Application();
                 {/php}
             </div>
-            <div class="well page" id="addRouter">
-                <h1 class="header">{#addRouter#}</h1>
-                {include file="./managing/addRouter/addRouter.tpl"}
-            </div>
+            {include file="./managing/addRouter/selectCommunity.tpl"}
+            {include file="./managing/addRouter/addRouter.tpl"}
           </div>
           <div class="col-xs-2">
             <button class="btn btn-fab btn-material-grey-200" id="opensource"><i class="mdi-action-open-in-new"></i></button></div>
@@ -96,7 +95,6 @@
 {literal}
 <script async type="text/javascript">
   window.page = window.location.hash || "#welcome";
-
   $(document).ready(function() {
     if (window.page != "#welcome") {
       $(".menu").find("li[data-target=" + window.page + "]").trigger("click");
