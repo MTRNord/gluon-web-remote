@@ -23,7 +23,6 @@ switch ($lang){
         $smarty->setConfigDir('configs/smarty/en_US');
         break;
 }
-
 $smarty->display('index.tpl');
 //$smarty->testInstall();
 ?>
