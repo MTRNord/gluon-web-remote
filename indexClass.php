@@ -115,8 +115,28 @@ class helper{
 		   return 0;
 		} 
 		fclose($fp);
+	}
+    
+    ################
+	# getNodeNames #
+	################
+	public static function getNodeNames($communityID){
+		main::getNodes($communityID);
+        $communities_str = file_get_contents("configs/communities.json");
+		$json_communities = json_decode($communities_str);
+        if ($json_communities->$communityID->supported == 1) {
+            $nodes_str = file_get_contents("nodes/nodes".$communityID.".json");
+		    $json_nodes = json_decode($nodes_str);
+		    foreach($json_nodes->nodes as $nodes){
+		        if(!empty($nodes->name)){
+                    echo "<option value=\"".$nodes->name."\">".$nodes->name."</option>";
+		        }else{};
+		    }
+		    return 1;
+        }else{
+            echo "<b> This Community is not yet supported!!";
+        }
 		
-
 	}
 
 

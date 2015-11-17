@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-09 18:18:25
+<?php /* Smarty version 3.1.27, created on 2015-11-17 14:28:00
          compiled from "configs/smarty/templates/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:4118014745640e371a07678_11293514%%*/
+/*%%SmartyHeaderCode:501976865564b397036b220_50799285%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5fa129d9cb11e0f32b30c3f5208681e5b178f0c' => 
     array (
       0 => 'configs/smarty/templates/index.tpl',
-      1 => 1447093045,
+      1 => 1447770478,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4118014745640e371a07678_11293514',
+  'nocache_hash' => '501976865564b397036b220_50799285',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5640e371a2c894_60814898',
+  'unifunc' => 'content_564b39704111b6_18373561',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5640e371a2c894_60814898')) {
-function content_5640e371a2c894_60814898 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564b39704111b6_18373561')) {
+function content_564b39704111b6_18373561 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '4118014745640e371a07678_11293514';
+$_smarty_tpl->properties['nocache_hash'] = '501976865564b397036b220_50799285';
 include_once ('indexClass.php');?>
 
 <?php include_once ('libs/login-base/vendor/autoload.php');?>
@@ -32,30 +32,17 @@ include_once ('indexClass.php');?>
 <html>
 
   <head>
+    <meta name="google-site-verification" content="9HLPgOcD4Pa4O5Sjut-nAdSjE7_NPriPb0L4w3ZMD_Y" />
     <title>Material Design for Bootstrap</title>
 
     <!-- Mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Twitter Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Material Design for Bootstrap -->
-    <link href="css/roboto.min.css" rel="stylesheet">
-    <link href="css/material-fullpalette.min.css" rel="stylesheet">
-    <link href="css/ripples.min.css" rel="stylesheet">
-
-    <!-- Dropdown.js -->
-    <link href="css/jquery.dropdown.css" rel="stylesheet">
-
-	<!-- ex inline css -->
-	<link href="css/index.css" rel="stylesheet">
-
-
+    <!-- Charset -->
+    <meta charset="UTF-8">
+    <!-- Descripson -->
+    <meta name="description" content="Gluon Web Admin for configuring Routers." />
   </head>
   <body>
-
-    <!--<a href="https://github.com/MTRNord/gluon-web-remote" style="position: absolute; top: 0; left: 0; border: 0; z-index: 10;"><img src="images/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" data-canonical-src="images/forkme_right_darkblue_121621.png"></a>-->
 
     <div class="header-panel shadow-z-2">
       <div class="container-fluid">
@@ -76,6 +63,8 @@ include_once ('indexClass.php');?>
             <li class="active withripple" data-target="#welcome"><?php echo $_smarty_tpl->getConfigVariable( 'welcomeHead');?>
 </li>
             <li class="withripple" data-target="#tests">Tests</li>
+            <li class="withripple" data-target="#addRouter"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
+</li>
             <li class="withripple" data-target="#login"><?php echo $_smarty_tpl->getConfigVariable( 'login');?>
 </li>
           </ul>
@@ -108,6 +97,13 @@ include_once ('indexClass.php');?>
                     new Application();
                 ?>
             </div>
+            <div class="well page" id="addRouter">
+                <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
+</h1>
+                <?php echo $_smarty_tpl->getSubTemplate ("./managing/addRouter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+            </div>
           </div>
           <div class="col-xs-2">
             <button class="btn btn-fab btn-material-grey-200" id="opensource"><i class="mdi-action-open-in-new"></i></button></div>
@@ -129,123 +125,133 @@ include_once ('indexClass.php');?>
       </div>
     </div>
 
-
-    <!-- jQuery -->
-    <?php echo '<script'; ?>
- src="js/jquery-1.10.2.min.js"><?php echo '</script'; ?>
->
-
-
-    <!-- Open source code -->
-    
-    <?php echo '<script'; ?>
->
-      window.page = window.location.hash || "#welcome";
-
-      $(document).ready(function() {
-        if (window.page != "#welcome") {
-          $(".menu").find("li[data-target=" + window.page + "]").trigger("click");
-        }
-      });
-
-      $(window).on("resize", function() {
-        $("html, body").height($(window).height());
-        $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight());
-        $(".pages").height($(window).height());
-      }).trigger("resize");
-
-      $(".menu li").click(function() {
-        // Menu
-        if (!$(this).data("target")) return;
-        if ($(this).is(".active")) return;
-        $(".menu li").not($(this)).removeClass("active");
-        $(".page").not(page).removeClass("active").hide();
-        window.page = $(this).data("target");
-        var page = $(window.page);
-        window.location.hash = window.page;
-        $(this).addClass("active");
-
-
-        page.show();
-
-        var totop = setInterval(function() {
-            $(".pages").animate({scrollTop:0}, 0);
-        }, 1);
-
-        setTimeout(function() {
-          page.addClass("active");
-          setTimeout(function() {
-            clearInterval(totop);
-          }, 1000);
-        }, 100);
-      });
-
-      function cleanSource(html) {
-        var lines = html.split(/\n/);
-
-        lines.shift();
-        lines.splice(-1, 1);
-
-        var indentSize = lines[0].length - lines[0].trim().length,
-            re = new RegExp(" {" + indentSize + "}");
-
-        lines = lines.map(function(line){
-          if (line.match(re)) {
-            line = line.substring(indentSize);
-          }
-
-          return line;
-        });
-
-        lines = lines.join("\n");
-
-        return lines;
-      }
-
-      $("#opensource").click(function() {
-        $.get(window.location.href, function(data){
-          var html = $(data).find(window.page).html();
-          html = cleanSource(html);
-          $("#source-modal pre").text(html);
-          $("#source-modal").modal();
-        });
-      });
-    <?php echo '</script'; ?>
->
-    
-    
-    <!-- Twitter Bootstrap -->
-    <?php echo '<script'; ?>
- src="js/bootstrap.min.js"><?php echo '</script'; ?>
->
-
-    <!-- Material Design for Bootstrap -->
-    <?php echo '<script'; ?>
- src="js/material.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="js/ripples.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
->
-      $.material.init();
-    <?php echo '</script'; ?>
->
-
-    <!-- Dropdown.js -->
-    <?php echo '<script'; ?>
- src="js/jquery.dropdown.js"><?php echo '</script'; ?>
->
-    
-    <?php echo '<script'; ?>
->
-      $("#dropdown-menu select").dropdown();
-    <?php echo '</script'; ?>
->
-    
-    
   </body>
 </html>
-<?php }
+<!-- jQuery -->
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/jquery-1.10.2.min.js"><?php echo '</script'; ?>
+>
+
+<!-- Open source code -->
+
+<?php echo '<script'; ?>
+ async type="text/javascript">
+  window.page = window.location.hash || "#welcome";
+
+  $(document).ready(function() {
+    if (window.page != "#welcome") {
+      $(".menu").find("li[data-target=" + window.page + "]").trigger("click");
+    }
+  });
+
+  $(window).on("resize", function() {
+    $("html, body").height($(window).height());
+    $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight());
+    $(".pages").height($(window).height());
+  }).trigger("resize");
+
+  $(".menu li").click(function() {
+    // Menu
+    if (!$(this).data("target")) return;
+    if ($(this).is(".active")) return;
+    $(".menu li").not($(this)).removeClass("active");
+    $(".page").not(page).removeClass("active").hide();
+    window.page = $(this).data("target");
+    var page = $(window.page);
+    window.location.hash = window.page;
+    $(this).addClass("active");
+
+
+    page.show();
+
+    var totop = setInterval(function() {
+        $(".pages").animate({scrollTop:0}, 0);
+    }, 1);
+
+    setTimeout(function() {
+      page.addClass("active");
+      setTimeout(function() {
+        clearInterval(totop);
+      }, 1000);
+    }, 100);
+  });
+
+  function cleanSource(html) {
+    var lines = html.split(/\n/);
+
+    lines.shift();
+    lines.splice(-1, 1);
+
+    var indentSize = lines[0].length - lines[0].trim().length,
+        re = new RegExp(" {" + indentSize + "}");
+
+    lines = lines.map(function(line){
+      if (line.match(re)) {
+        line = line.substring(indentSize);
+      }
+
+      return line;
+    });
+
+    lines = lines.join("\n");
+
+    return lines;
+  }
+
+  $("#opensource").click(function() {
+    $.get(window.location.href, function(data){
+      var html = $(data).find(window.page).html();
+      html = cleanSource(html);
+      $("#source-modal pre").text(html);
+      $("#source-modal").modal();
+    });
+  });
+<?php echo '</script'; ?>
+>
+
+    
+<!-- Twitter Bootstrap -->
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+
+<!-- Material Design for Bootstrap -->
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/material.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/ripples.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ async type="text/javascript">
+  $.material.init();
+<?php echo '</script'; ?>
+>
+
+<!-- Dropdown.js -->
+<?php echo '<script'; ?>
+ type="text/javascript" src="js/jquery.dropdown.js"><?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
+ async type="text/javascript">
+  $("#dropdown-menu select").dropdown();
+<?php echo '</script'; ?>
+>
+
+    
+<!-- Twitter Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design for Bootstrap -->
+<link href="css/roboto.min.css" rel="stylesheet">
+<link href="css/material-fullpalette.min.css" rel="stylesheet">
+<link href="css/ripples.min.css" rel="stylesheet">
+
+<!-- Dropdown.js -->
+<link href="css/jquery.dropdown.css" rel="stylesheet">
+
+<!-- ex inline css -->
+<link href="css/index.min.css" rel="stylesheet"><?php }
 }
 ?>

@@ -1,263 +1,337 @@
-* {
-	box-sizing: border-box;
+*
+{
+	box-sizing:border-box
 }
-.header-panel {
-	background-color: #ffb400;
-	height: 144px;
-	position: relative;
-	z-index: 3;
+
+.header-panel
+{
+	background-color:#ffb400;
+	height:144px;
+	position:relative;
+	z-index:3
 }
-.header-panel div {
-	position: relative;
-	height: 100%;
+
+.header-panel div
+{
+	position:relative;
+	height:100%
 }
-.header-panel h1 {
-	color: #FFF;
-	font-size: 20px;
-	font-weight: 400;
-	position: absolute;
-	bottom: 10px;
-	padding-left: 35px;
+
+.header-panel h1
+{
+	color:#FFF;
+	font-size:20px;
+	font-weight:400;
+	position:absolute;
+	bottom:10px;
+	padding-left:35px
 }
-.menu {
-	position:fixed !important;
-	width:27% !important;
-	height:75% !important;
-	overflow: auto !important;
-	padding: 0 !important;
+
+.menu,.menu ul
+{
+	padding:0!important
 }
-.menu, .menu * {
-	-webkit-user-select: none !important;
-	-moz-user-select: none !important;
-	user-select: none !important;
+
+.menu
+{
+	position:fixed!important;
+	width:27%!important;
+	height:75%!important;
+	overflow:auto!important
 }
-.menu ul {
-	padding: 0 !important;
-	margin: 7px 0 !important;
+
+.menu,.menu *
+{
+	-webkit-user-select:none!important;
+	-moz-user-select:none!important;
+	user-select:none!important
 }
-.menu ul li {
-	list-style: none !important;
-	padding: 20px 0 20px 50px !important;
-	font-size: 15px !important;
-	font-weight: normal !important;
-	cursor: pointer !important;
+
+.menu ul
+{
+	margin:7px 0!important
 }
-.menu ul li.active {
-	background-color: #dedede !important;
-	position: relative !important;
+
+.menu ul li
+{
+	list-style:none!important;
+	padding:20px 0 20px 50px !important;
+	font-size:15px!important;
+	font-weight:400!important;
+	cursor:pointer!important
 }
-.menu ul li a {
-	color: rgb(51, 51, 51) !important;
-	text-decoration: none !important;
+
+.menu ul li.active
+{
+	background-color:#dedede!important;
+	position:relative!important
 }
-.pages {
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 4;
-	padding: 0;
-	overflow: auto;
+
+.menu ul li a
+{
+	color:#333!important;
+	text-decoration:none!important
 }
-.pages > div {
-	padding: 0 5px;
-	padding-top: 64px;
+
+.pages
+{
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:4;
+	padding:0;
+	overflow:auto
 }
-.pages .header {
-	color: rgb(0, 158, 224);
-	font-size: 24px;
-	font-weight: normal;
-	margin-top: 5px;
-	margin-bottom: 60px;
-	letter-spacing: 1.20000004768372px;
+
+.pages>div
+{
+	padding:64px 5px 0
 }
-.page {
-	transform: translateY(1080px);
-	transition: transform 0 linear;
-	display: none;
-	opacity: 0;
-	font-size: 16px;
-	}
-.page.active {
-	transform: translateY(0px);
-	transition: all 0.3s ease-out;
-	display: block;
-	opacity: 1;
+
+.pages .header
+{
+	color:#009ee0;
+	font-size:24px;
+	font-weight:400;
+	margin-top:5px;
+	margin-bottom:60px;
+	letter-spacing:1.2px
 }
-#opensource {
-	color: rgba(0, 0, 0, 0.62);
-	position: fixed;
-	margin-top: 50px;
-	margin-left: 50px;
-	z-index: 100;
+
+.page
+{
+	transform:translateY(1080px);
+	transition:transform 0 linear;
+	display:none;
+	opacity:0;
+	font-size:16px
 }
-#source-modal h4 {
-	color: black;
+
+.page.active
+{
+	transform:translateY(0);
+	transition:all .3s ease-out;
+	display:block;
+	opacity:1
 }
-#checkbox .sample1 label {
-	font-weight: bold;
+
+#opensource
+{
+	color:rgba(0,0,0,.62);
+	position:fixed;
+	margin-top:50px;
+	margin-left:50px;
+	z-index:100
 }
-#checkbox .hint {
-	padding-left: 45px;
-	padding-top: 20px;
-	font-weight: 400;
+
+#source-modal h4
+{
+	color:#000
 }
-#checkbox .sample1 {
-	padding-bottom: 20px;
+
+#checkbox .sample1 label
+{
+	font-weight:700
 }
-#checkbox h2 {
-	font-size: 18.7199993133545px;
-	font-weight: bold;
-	margin-bottom: 30px;
+
+#checkbox .hint
+{
+	padding-left:45px;
+	padding-top:20px;
+	font-weight:400
 }
-#checkbox .sample2 {
-	width: 300px;
-	clear: both;
-	font-weight: 400;
+
+#checkbox .sample1
+{
+	padding-bottom:20px
 }
-#checkbox .sample2 {
-	padding: 10px 0;
+
+#checkbox h2
+{
+	font-size:18.72px;
+	font-weight:700;
+	margin-bottom:30px
 }
-#checkbox .sample2 .text {
-	display: inline-block;
+
+#checkbox .sample2
+{
+	width:300px;
+	clear:both;
+	font-weight:400;
+	padding:10px 0
 }
-#checkbox .sample2 .checkbox {
-	float: right;
-	margin: 0;
+
+#checkbox .sample2 .text
+{
+	display:inline-block
 }
-#radio-button h2 {
-	font-size: 18.7199993133545px;
-	font-weight: bold;
-	margin-bottom: 30px;
-	margin-top: 50px;
+
+#checkbox .sample2 .checkbox
+{
+	float:right;
+	margin:0
 }
-#radio-button .radio {
-	margin: 20px 10px;
+
+#radio-button h2
+{
+	font-size:18.72px;
+	font-weight:700;
+	margin-bottom:30px;
+	margin-top:50px
 }
-#toggle-button h2 {
-	font-size: 18.7199993133545px;
-	font-weight: bold;
-	margin-bottom: 30px;
-	margin-top: 50px;
+
+#radio-button .radio
+{
+	margin:20px 10px
 }
-#toggle-button .togglebutton label {
-	margin: 20px 10px;
-	width: 200px;
+
+#toggle-button h2
+{
+	font-size:18.72px;
+	font-weight:700;
+	margin-bottom:30px;
+	margin-top:50px
 }
-#toggle-button .togglebutton .toggle {
-	float: right;
+
+#toggle-button .togglebutton label
+{
+	margin:20px 10px;
+	width:200px
 }
-#input h2 {
-	padding: 14px;
-	font-size: 16px;
-	font-weight: 400;
+
+#toggle-button .togglebutton .toggle
+{
+	float:right
 }
-#input .inputs {
-	width: 80%;
+
+#input h2
+{
+	padding:14px;
+	font-size:16px;
+	font-weight:400
 }
-#input .form-control-wrapper {
-	margin: 30px 0;
+
+#input .inputs
+{
+	width:80%
 }
-#progress-bar h2 {
-	font-size: 18.7199993133545px;
-	font-weight: bold;
-	margin-bottom: 30px;
+
+#input .form-control-wrapper
+{
+	margin:30px 0
 }
-#slider .sample1, #slider .sample2 {
-	padding: 20px 0;
-	background-color: #f0f0f0;
-	margin-bottom: 20px;
+
+#progress-bar h2
+{
+	font-size:18.72px;
+	font-weight:700;
+	margin-bottom:30px
 }
-#slider .sample2 {
-	height: 150px;
+
+#slider .sample1,#slider .sample2
+{
+	padding:20px 0;
+	background-color:#f0f0f0;
+	margin-bottom:20px
 }
-#slider .sample2 .slider {
-	margin: 0 40px;
+
+#button h2,#dropdown h2,#floating-action-button h2,#slider h2
+{
+	padding:14px;
+	font-size:16px;
+	font-weight:400
 }
-#slider h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#slider .sample2
+{
+	height:150px
 }
-#slider .slider {
-	margin: 15px;
+
+#slider .sample2 .slider
+{
+	margin:0 40px
 }
-#button h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#slider h2
+{
+	margin:0
 }
-#floating-action-button .btn {
-	margin: 20px;
+
+#slider .slider
+{
+	margin:15px
 }
-#floating-action-button h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#button h2
+{
+	margin:0
 }
-#dropdown h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#floating-action-button .btn
+{
+	margin:20px
 }
-#dropdown .dropdown {
-	font-size: 30px;
-	padding: 20px;
+
+#dropdown h2,#floating-action-button h2
+{
+	margin:0
 }
-#dropdown-menu h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#dropdown .dropdown
+{
+	font-size:30px;
+	padding:20px
 }
-#dropdown-menu .sample {
-	width: 200px;
+
+#dialog h2,#dropdown-menu h2,#shadow h2
+{
+	padding:14px;
+	font-size:16px;
+	font-weight:400
 }
-#dropdown-menu .form-group {
-	margin: 30px 0;
+
+#dropdown-menu h2
+{
+	margin:0
 }
-#dialog h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#dropdown-menu .sample
+{
+	width:200px
 }
-#shadow h2 {
-	padding: 14px;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
+
+#dropdown-menu .form-group
+{
+	margin:30px 0
 }
-#shadow .sample {
-	width:  100px;
-	height: 100px;
-	margin: 16px;
-	padding: 16px;
-	display: inline-block;
+
+#shadow .sample,#shadow-sample2,#shadow-sample3
+{
+	display:inline-block;
+	width:100px;
+	height:100px;
+	margin:16px;
+	padding:16px
 }
-#shadow-sample2 {
-	display: inline-block;
-	width:  100px;
-	height: 100px;
-	margin: 16px;
-	padding: 16px;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+
+#dialog h2,#shadow h2
+{
+	margin:0
 }
-#shadow-sample3 {
-	display: inline-block;
-	width:  100px;
-	height: 100px;
-	margin: 16px;
-	padding: 16px;
-	border-radius: 100px;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+
+#shadow-sample2
+{
+	cursor:pointer;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none
+}
+
+#shadow-sample3
+{
+	border-radius:100px;
+	cursor:pointer;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none
 }

@@ -23,6 +23,9 @@ switch ($lang){
         $smarty->setConfigDir('configs/smarty/en_US');
         break;
 }
+//var_dump($smarty->getTemplateDir(0));
+$templates = $smarty->getTemplateDir(0);
+$smarty->assign('templates', $templates);
 
 $smarty->display('index.tpl');
 //$smarty->testInstall();

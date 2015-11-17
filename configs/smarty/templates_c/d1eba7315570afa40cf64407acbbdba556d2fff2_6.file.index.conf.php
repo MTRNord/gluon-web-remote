@@ -1,4 +1,4 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-12 17:12:37
+<?php /* Smarty version 3.1.27, created on 2015-11-17 17:02:35
          compiled from "configs/smarty/de_DE/index.conf" */ ?>
 <?php
 /*%%SmartyHeaderCode:%%*/
@@ -9,18 +9,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd1eba7315570afa40cf64407acbbdba556d2fff2' => 
     array (
       0 => 'index.conf',
-      1 => 1447093126,
+      1 => 1447778619,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5644c885d6e899_23583844',
+  'unifunc' => 'content_564b5dab7081a3_63706014',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5644c885d6e899_23583844')) {
-function content_5644c885d6e899_23583844 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564b5dab7081a3_63706014')) {
+function content_564b5dab7081a3_63706014 ($_smarty_tpl) {
 
 Smarty_Internal_Extension_Config::loadConfigVars($_smarty_tpl, array (
   'sections' => 
@@ -33,6 +33,8 @@ Smarty_Internal_Extension_Config::loadConfigVars($_smarty_tpl, array (
     'abilitysHead' => 'Was kann ich hiermit machen?',
     'abilitys' => 'Dies ist ein Beispiel-Text',
     'login' => 'Anmeldung',
+    'addRouter' => 'Router hinzufügen',
+    'routername' => 'Router Name',
   ),
 ));
 }
