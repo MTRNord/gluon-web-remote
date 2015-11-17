@@ -49,6 +49,46 @@
 	    	"v4": "10.18.0.0",
 	    	"v4mask": "/16",
 	    	"supported": 1
+	    },
+	    "FFAC": {
+	        "ccode": "FFAC",
+	    	"name": "Freifunk Aachen",
+	    	"nodesURL": "http://map.freifunk-aachen.de/v2/data/nodes.json",
+	    	"v6": "2a03:2260:114:",
+	    	"v6mask": "/48",
+	    	"v4": "10.5.0.0",
+	    	"v4mask": "/16",
+	    	"supported": 1
+	    },
+	    "TECFF": {
+	        "ccode": "TECFF",
+	    	"name": "Freifunk Altdorf e.V.",
+	    	"nodesURL": "http://tecff.de/data/nodes.json",
+	    	"v6": "2001:470:733f:",
+	    	"v6mask": "/48",
+	    	"v4": "10.120.0.0",
+	    	"v4mask": "/16",
+	    	"supported": 1
+	    },
+	    "FFAN": {
+	        "ccode": "FFAN",
+	    	"name": "Freifunk Ansbach",
+	    	"nodesURL": "https://netmon.freifunk-ansbach.de/api/router_json.php",
+	    	"v6": "2001:470:5168:",
+	    	"v6mask": "/64",
+	    	"v4": "10.123.64.0",
+	    	"v4mask": "/18",
+	    	"supported": 0
+	    },
+	    "FF3L": {
+	        "ccode": "FF3L",
+	    	"name": "Freifunk 3Ländereck",
+	    	"nodesURL": "http://map.freifunk-3laendereck.net/data/nodes.json",
+	    	"v6": "2001:bf7:20:",
+	    	"v6mask": "/44",
+	    	"v4": "110.119.0.0",
+	    	"v4mask": "/16",
+	    	"supported": 1
 	    }
     }
 }

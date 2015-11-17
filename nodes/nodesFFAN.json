@@ -1,0 +1,1335 @@
+{
+    "version": "1.0.0",
+    "updated_at": "2015-11-17T23:42:57+01:00",
+    "community": {
+        "name": "FreifunkAnsbach",
+        "href": "http://netmon.freifunk-ansbach.de//api/community.php"
+    },
+    "nodes": [
+        {
+            "id": "2",
+            "name": "wachtel",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=2",
+            "status": {
+                "online": true,
+                "clients": 2,
+                "lastcontact": "2015-11-17T23:40:10+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "1"
+                }
+            },
+            "position": {
+                "lat": "49.294997387521",
+                "long": "10.580519492368"
+            }
+        },
+        {
+            "id": "4",
+            "name": "TBFreifunkCafe",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=4",
+            "status": {
+                "online": true,
+                "clients": 2,
+                "lastcontact": "2015-11-17T23:40:15+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.298766196961",
+                "long": "10.579161958041"
+            }
+        },
+        {
+            "id": "6",
+            "name": "piet",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=6",
+            "status": {
+                "online": true,
+                "clients": 3,
+                "lastcontact": "2015-11-17T23:40:20+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "1"
+                }
+            },
+            "position": {
+                "lat": "49.294967183357",
+                "long": "10.580608005266"
+            }
+        },
+        {
+            "id": "10",
+            "name": "AN-IT",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=10",
+            "status": {
+                "online": true,
+                "clients": 4,
+                "lastcontact": "2015-11-17T23:40:23+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.303685455039",
+                "long": "10.579235493472"
+            }
+        },
+        {
+            "id": "17",
+            "name": "ELJLieferdienst",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=17",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:27+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.324136944211",
+                "long": "10.817935259245"
+            }
+        },
+        {
+            "id": "18",
+            "name": "ELJVerteiler",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=18",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:40:31+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.324242046106",
+                "long": "10.818283946418"
+            }
+        },
+        {
+            "id": "20",
+            "name": "AN-SitzungssaalUplink",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=20",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:35+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.302675766505",
+                "long": "10.572757208226"
+            }
+        },
+        {
+            "id": "21",
+            "name": "AN-MartinLutherPlatz",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=21",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:39+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.302739848696",
+                "long": "10.572698199627"
+            }
+        },
+        {
+            "id": "22",
+            "name": "AN-Montgelasplatz",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=22",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:43+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.302748763698",
+                "long": "10.572810859592"
+            }
+        },
+        {
+            "id": "23",
+            "name": "AN-Volkshochschule",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=23",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:47+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.302747788967",
+                "long": "10.572145664570"
+            }
+        },
+        {
+            "id": "25",
+            "name": "nn-jsbp7",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=25",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:51+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "38"
+                }
+            },
+            "position": {
+                "lat": "49.302519117019",
+                "long": "10.574514055131"
+            }
+        },
+        {
+            "id": "26",
+            "name": "KolpingAnsbach",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=26",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:40:55+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "39"
+                }
+            },
+            "position": {
+                "lat": "49.299219899581",
+                "long": "10.580822099713"
+            }
+        },
+        {
+            "id": "27",
+            "name": "ReisebueroGlossner2",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=27",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:30:55+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "40"
+                }
+            },
+            "position": {
+                "lat": "49.302839159626",
+                "long": "10.571547560706"
+            }
+        },
+        {
+            "id": "28",
+            "name": "ReisebueroGlossner",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=28",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:30:58+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "40"
+                }
+            },
+            "position": {
+                "lat": "49.302795430834",
+                "long": "10.571526110221"
+            }
+        },
+        {
+            "id": "29",
+            "name": "Freifunk-WStreet",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=29",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:41:40+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "64"
+                }
+            },
+            "position": {
+                "lat": "0",
+                "long": "0"
+            }
+        },
+        {
+            "id": "31",
+            "name": "BahnhofsplatzMondoAtelier",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=31",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:11+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.299049823486",
+                "long": "10.579238137062"
+            }
+        },
+        {
+            "id": "32",
+            "name": "TB.Bahnhofsplatz",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=32",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:15+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.299004883745",
+                "long": "10.579056390470"
+            }
+        },
+        {
+            "id": "33",
+            "name": "AN-Buergeramt",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=33",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:20+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.303652054895",
+                "long": "10.579246777006"
+            }
+        },
+        {
+            "id": "35",
+            "name": "Westside",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=35",
+            "status": {
+                "online": true,
+                "clients": 4,
+                "lastcontact": "2015-11-17T23:40:24+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.294208275855",
+                "long": "10.576437022242"
+            }
+        },
+        {
+            "id": "41",
+            "name": "freifunk-14cc20a67bea",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=41",
+            "status": {
+                "online": true,
+                "clients": 4,
+                "lastcontact": "2015-11-17T23:40:28+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "156"
+                }
+            },
+            "position": {
+                "lat": "49.302889772236",
+                "long": "10.587438293642"
+            }
+        },
+        {
+            "id": "42",
+            "name": "Feuchtwangen1",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=42",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:32+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.180081862110",
+                "long": "10.333131301121"
+            }
+        },
+        {
+            "id": "46",
+            "name": "Studentenbude",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=46",
+            "status": {
+                "online": true,
+                "clients": 7,
+                "lastcontact": "2015-11-17T23:40:40+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "166"
+                }
+            },
+            "position": {
+                "lat": "0",
+                "long": "0"
+            }
+        },
+        {
+            "id": "47",
+            "name": "freifunk-hospitalstrasse",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=47",
+            "status": {
+                "online": true,
+                "clients": 7,
+                "lastcontact": "2015-11-17T23:40:45+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "174"
+                }
+            },
+            "position": {
+                "lat": "49.303431378693",
+                "long": "10.564002470815"
+            }
+        },
+        {
+            "id": "48",
+            "name": "AN-AKUT",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=48",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:49+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "4"
+                }
+            },
+            "position": {
+                "lat": "49.302684826126",
+                "long": "10.572690153001"
+            }
+        },
+        {
+            "id": "49",
+            "name": "Fahrschule-Wegner",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=49",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:53+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "191"
+                }
+            },
+            "position": {
+                "lat": "49.401961830796",
+                "long": "10.692018935486"
+            }
+        },
+        {
+            "id": "50",
+            "name": "TSCBernd",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=50",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:56+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.321759018320",
+                "long": "10.821241938517"
+            }
+        },
+        {
+            "id": "51",
+            "name": "TSCHeim",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=51",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:00+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.321839006556",
+                "long": "10.827390836259"
+            }
+        },
+        {
+            "id": "53",
+            "name": "TradebyteEingang",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=53",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:03+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.299113176825",
+                "long": "10.579209773563"
+            }
+        },
+        {
+            "id": "55",
+            "name": "freifunk-ArasDoener",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=55",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:41:07+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "156"
+                }
+            },
+            "position": {
+                "lat": "49.302121976747",
+                "long": "10.584106982859"
+            }
+        },
+        {
+            "id": "56",
+            "name": "nn-jsbp7-2",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=56",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:13+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "38"
+                }
+            },
+            "position": {
+                "lat": "49.302653830070",
+                "long": "10.574495214990"
+            }
+        },
+        {
+            "id": "57",
+            "name": "freifunk-castello",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=57",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:11+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "204"
+                }
+            },
+            "position": {
+                "lat": "49.301748771285",
+                "long": "10.575726665063"
+            }
+        },
+        {
+            "id": "58",
+            "name": "freifunk-30b5c2d9ee12",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=58",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:18+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "205"
+                }
+            },
+            "position": {
+                "lat": "0",
+                "long": "0"
+            }
+        },
+        {
+            "id": "59",
+            "name": "freifunk-Laux",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=59",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:24+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "205"
+                }
+            },
+            "position": {
+                "lat": "0",
+                "long": "0"
+            }
+        },
+        {
+            "id": "60",
+            "name": "BrotHaus-Cafe-Ansbach",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=60",
+            "status": {
+                "online": false,
+                "clients": 0,
+                "lastcontact": "2015-07-27T15:00:55+02:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "206"
+                }
+            },
+            "position": {
+                "lat": "49.295464288739",
+                "long": "10.568825104182"
+            }
+        },
+        {
+            "id": "61",
+            "name": "BrotHaus-Brot-u-Zeit-Ansbach",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=61",
+            "status": {
+                "online": false,
+                "clients": 0,
+                "lastcontact": "2015-08-05T11:13:13+02:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "206"
+                }
+            },
+            "position": {
+                "lat": "49.302467109341",
+                "long": "10.572590918453"
+            }
+        },
+        {
+            "id": "62",
+            "name": "BrotHaus-Lidl-Nbg-Str-Ansbach",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=62",
+            "status": {
+                "online": false,
+                "clients": 0,
+                "lastcontact": "2015-08-05T12:02:01+02:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "206"
+                }
+            },
+            "position": {
+                "lat": "49.304070322338",
+                "long": "10.585314633093"
+            }
+        },
+        {
+            "id": "63",
+            "name": "BrotHaus-Zunftbaeckerei-DKB",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=63",
+            "status": {
+                "online": false,
+                "clients": 0,
+                "lastcontact": "2015-08-13T11:09:09+02:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "206"
+                }
+            },
+            "position": {
+                "lat": "49.069053290384",
+                "long": "10.319875838543"
+            }
+        },
+        {
+            "id": "64",
+            "name": "TB.BahnhofsplatzLinks",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=64",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:41:48+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.298957648662",
+                "long": "10.579051040426"
+            }
+        },
+        {
+            "id": "65",
+            "name": "TradebyteUplink",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=65",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:51+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "2"
+                }
+            },
+            "position": {
+                "lat": "49.299000501990",
+                "long": "10.579168065361"
+            }
+        },
+        {
+            "id": "66",
+            "name": "Pepe-Ansbach",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=66",
+            "status": {
+                "online": true,
+                "clients": 3,
+                "lastcontact": "2015-11-17T23:41:55+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.301304633714",
+                "long": "10.571483130197"
+            }
+        },
+        {
+            "id": "67",
+            "name": "StoertebeckerWasch",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=67",
+            "status": {
+                "online": true,
+                "clients": 3,
+                "lastcontact": "2015-11-17T23:41:58+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "208"
+                }
+            },
+            "position": {
+                "lat": "49.303072081432",
+                "long": "10.567532942802"
+            }
+        },
+        {
+            "id": "68",
+            "name": "StoertebeckerUplink",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=68",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:42:00+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "208"
+                }
+            },
+            "position": {
+                "lat": "49.303120620655",
+                "long": "10.567542359283"
+            }
+        },
+        {
+            "id": "69",
+            "name": "StoertebeckerUP2",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=69",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:42:03+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "208"
+                }
+            },
+            "position": {
+                "lat": "49.303064390622",
+                "long": "10.567627476298"
+            }
+        },
+        {
+            "id": "70",
+            "name": "JCANMong",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=70",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:42:07+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "209"
+                }
+            },
+            "position": {
+                "lat": "49.303251663184",
+                "long": "10.573159285416"
+            }
+        },
+        {
+            "id": "71",
+            "name": "JZANKueche",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=71",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:42:10+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "209"
+                }
+            },
+            "position": {
+                "lat": "49.303339374692",
+                "long": "10.573197097690"
+            }
+        },
+        {
+            "id": "72",
+            "name": "JZANBuero",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=72",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:40:11+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "209"
+                }
+            },
+            "position": {
+                "lat": "49.303438957274",
+                "long": "10.573378743700"
+            }
+        },
+        {
+            "id": "73",
+            "name": "Waldweg1",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=73",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:16+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "6"
+                }
+            },
+            "position": {
+                "lat": "49.324384589802",
+                "long": "10.816748507484"
+            }
+        },
+        {
+            "id": "74",
+            "name": "Feuchtwangen2",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=74",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:21+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.180135607950",
+                "long": "10.333172904106"
+            }
+        },
+        {
+            "id": "76",
+            "name": "Obelix",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=76",
+            "status": {
+                "online": true,
+                "clients": 7,
+                "lastcontact": "2015-11-17T23:40:26+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "211"
+                }
+            },
+            "position": {
+                "lat": "49.302800288267",
+                "long": "10.569671333941"
+            }
+        },
+        {
+            "id": "77",
+            "name": "RefUp01",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=77",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:40:30+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "213"
+                }
+            },
+            "position": {
+                "lat": "49.317148464623",
+                "long": "10.625697301468"
+            }
+        },
+        {
+            "id": "78",
+            "name": "RefUp02",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=78",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:40:33+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "213"
+                }
+            },
+            "position": {
+                "lat": "49.316414098459",
+                "long": "10.626716555268"
+            }
+        },
+        {
+            "id": "79",
+            "name": "Ref01",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=79",
+            "status": {
+                "online": false,
+                "clients": 0,
+                "lastcontact": "2015-10-27T20:30:38+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "213"
+                }
+            },
+            "position": {
+                "lat": "49.316784775162",
+                "long": "10.626791657118"
+            }
+        },
+        {
+            "id": "80",
+            "name": "Ref02",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=80",
+            "status": {
+                "online": false,
+                "clients": 0,
+                "lastcontact": "2015-10-27T20:30:42+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "213"
+                }
+            },
+            "position": {
+                "lat": "49.316414093774",
+                "long": "10.626850672906"
+            }
+        },
+        {
+            "id": "81",
+            "name": "feu-test1043v2",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=81",
+            "status": {
+                "online": true,
+                "clients": 1,
+                "lastcontact": "2015-11-17T23:41:18+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.180035193444",
+                "long": "10.332969705215"
+            }
+        },
+        {
+            "id": "82",
+            "name": "feu-test841v9",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=82",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:21+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.180039373358",
+                "long": "10.333063215985"
+            }
+        },
+        {
+            "id": "83",
+            "name": "feu-test841v8",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=83",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:24+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.180003818104",
+                "long": "10.332870987954"
+            }
+        },
+        {
+            "id": "85",
+            "name": "feu-test841v9-2",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=85",
+            "status": {
+                "online": true,
+                "clients": 0,
+                "lastcontact": "2015-11-17T23:41:27+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "158"
+                }
+            },
+            "position": {
+                "lat": "49.179989781038",
+                "long": "10.332930849115"
+            }
+        },
+        {
+            "id": "86",
+            "name": "freifunk-30b5c2b0522c",
+            "node_type": "AccessPoint",
+            "href": "http://netmon.freifunk-ansbach.de/router.php?router_id=86",
+            "status": {
+                "online": true,
+                "clients": 14,
+                "lastcontact": "2015-11-17T23:31:20+01:00"
+            },
+            "links": {
+                "admin-c": {
+                    "type": "people",
+                    "id": "216"
+                }
+            },
+            "position": {
+                "lat": "49.207930340558",
+                "long": "10.417403654904"
+            }
+        }
+    ],
+    "linked": [
+        {
+            "id": "1",
+            "name": "stesie",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=1"
+        },
+        {
+            "id": "2",
+            "name": "jom",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=2"
+        },
+        {
+            "id": "4",
+            "name": "Ansbach",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=4"
+        },
+        {
+            "id": "38",
+            "name": "noerzie",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=38"
+        },
+        {
+            "id": "39",
+            "name": "Kolping",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=39"
+        },
+        {
+            "id": "40",
+            "name": "ReisebueroGlossner",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=40"
+        },
+        {
+            "id": "64",
+            "name": "lutzi99",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=64"
+        },
+        {
+            "id": "156",
+            "name": "gt",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=156"
+        },
+        {
+            "id": "158",
+            "name": "Ralf_E",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=158"
+        },
+        {
+            "id": "166",
+            "name": "rmom666",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=166"
+        },
+        {
+            "id": "174",
+            "name": "emanuel.wiesner",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=174"
+        },
+        {
+            "id": "191",
+            "name": "Wegner",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=191"
+        },
+        {
+            "id": "204",
+            "name": "t0bi2k",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=204"
+        },
+        {
+            "id": "205",
+            "name": "rlaux",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=205"
+        },
+        {
+            "id": "206",
+            "name": "BrotHaus",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=206"
+        },
+        {
+            "id": "208",
+            "name": "OffeneLinkeAnsbach",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=208"
+        },
+        {
+            "id": "209",
+            "name": "JugendzentrumAN",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=209"
+        },
+        {
+            "id": "6",
+            "name": "sven",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=6"
+        },
+        {
+            "id": "211",
+            "name": "nih",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=211"
+        },
+        {
+            "id": "213",
+            "name": "REF",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=213"
+        },
+        {
+            "id": "216",
+            "name": "BauerC",
+            "href": "http://netmon.freifunk-ansbach.de/user.php?user_id=216"
+        }
+    ]
+}

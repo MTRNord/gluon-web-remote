@@ -58,7 +58,9 @@ class helper {
         $communities_str = file_get_contents("configs/communities.json");
         $json_communities = json_decode($communities_str);
         foreach($json_communities->communities as $community){
-            echo "<option value=\"".$community->ccode."\">".$community->name."</option>\n";
+            if($community->supported == 1){
+                echo "<option value=\"".$community->ccode."\">".$community->name."</option>\n";
+            }else{}
 	    }
 	    return 1;
 	}
