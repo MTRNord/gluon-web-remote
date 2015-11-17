@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-17 17:05:10
+<?php /* Smarty version 3.1.27, created on 2015-11-17 17:33:26
          compiled from "configs/smarty/templates/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:530990771564b5e466e6fc1_21227336%%*/
+/*%%SmartyHeaderCode:2068227855564b64e6d2f7b6_10308823%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5fa129d9cb11e0f32b30c3f5208681e5b178f0c' => 
     array (
       0 => 'configs/smarty/templates/index.tpl',
-      1 => 1447770478,
+      1 => 1447781600,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '530990771564b5e466e6fc1_21227336',
+  'nocache_hash' => '2068227855564b64e6d2f7b6_10308823',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_564b5e4670aa39_27400958',
+  'unifunc' => 'content_564b64e6d4c1d9_09435161',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_564b5e4670aa39_27400958')) {
-function content_564b5e4670aa39_27400958 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564b64e6d4c1d9_09435161')) {
+function content_564b64e6d4c1d9_09435161 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '530990771564b5e466e6fc1_21227336';
-include_once ('indexClass.php');?>
+$_smarty_tpl->properties['nocache_hash'] = '2068227855564b64e6d2f7b6_10308823';
+include_once ('classes/indexClass.php');?>
 
 <?php include_once ('libs/login-base/vendor/autoload.php');?>
 
@@ -100,7 +100,7 @@ include_once ('indexClass.php');?>
             <div class="well page" id="addRouter">
                 <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
 </h1>
-                <?php echo $_smarty_tpl->getSubTemplate ("./managing/addRouter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+                <?php echo $_smarty_tpl->getSubTemplate ("./managing/addRouter/addRouter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
             </div>

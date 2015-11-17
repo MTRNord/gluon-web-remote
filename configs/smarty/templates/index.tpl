@@ -1,4 +1,4 @@
-{include_php file='indexClass.php'}
+{include_php file='classes/indexClass.php'}
 {include_php file='libs/login-base/vendor/autoload.php'}
 {config_load file='index.conf'}
 <!DOCTYPE html>
@@ -64,7 +64,7 @@
             </div>
             <div class="well page" id="addRouter">
                 <h1 class="header">{#addRouter#}</h1>
-                {include file="./managing/addRouter.tpl"}
+                {include file="./managing/addRouter/addRouter.tpl"}
             </div>
           </div>
           <div class="col-xs-2">
