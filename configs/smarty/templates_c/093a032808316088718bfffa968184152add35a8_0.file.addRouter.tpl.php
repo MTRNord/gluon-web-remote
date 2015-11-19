@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-17 19:55:27
+<?php /* Smarty version 3.1.27, created on 2015-11-19 15:40:16
          compiled from "configs/smarty/templates/managing/addRouter/addRouter.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:887361078564b862ff15e89_43840385%%*/
+/*%%SmartyHeaderCode:1245738361564ded602599b5_86029617%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '093a032808316088718bfffa968184152add35a8' => 
     array (
       0 => 'configs/smarty/templates/managing/addRouter/addRouter.tpl',
-      1 => 1447789791,
+      1 => 1447947613,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '887361078564b862ff15e89_43840385',
+  'nocache_hash' => '1245738361564ded602599b5_86029617',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_564b862ff1aaa8_12496882',
+  'unifunc' => 'content_564ded6025f170_27858211',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_564b862ff1aaa8_12496882')) {
-function content_564b862ff1aaa8_12496882 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564ded6025f170_27858211')) {
+function content_564ded6025f170_27858211 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '887361078564b862ff15e89_43840385';
+$_smarty_tpl->properties['nocache_hash'] = '1245738361564ded602599b5_86029617';
 ?>
 <div class="well page" id="addRouter2">
     <h1 class="header"><?php echo $_smarty_tpl->getConfigVariable( 'addRouter');?>
@@ -51,6 +51,7 @@ $_smarty_tpl->properties['nocache_hash'] = '887361078564b862ff15e89_43840385';
             </div>
         </fieldset>
     </form>
-</div><?php }
+</div>
+<?php }
 }
 ?>

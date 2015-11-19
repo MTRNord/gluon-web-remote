@@ -89,7 +89,39 @@
   </body>
 </html>
 <!-- jQuery -->
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- Twitter Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- Material Design for Bootstrap -->
+<script type="text/javascript" src="js/material.min.js"></script>
+<script type="text/javascript" src="js/ripples.min.js"></script>
+<script async type="text/javascript">
+  $.material.init();
+</script>
+
+<!-- Dropdown.js -->
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+{literal}
+<script async type="text/javascript">
+  $("#dropdown-menu select").dropdown();
+</script>
+{/literal}
+    
+<!-- Twitter Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design for Bootstrap -->
+<link href="css/roboto.min.css" rel="stylesheet">
+<link href="css/material-fullpalette.min.css" rel="stylesheet">
+<link href="css/ripples.min.css" rel="stylesheet">
+
+<!-- Dropdown.js -->
+<link href="css/jquery.dropdown.css" rel="stylesheet">
+
+<!-- ex inline css -->
+<link href="css/index.min.css" rel="stylesheet">
+
 
 <!-- Open source code -->
 {literal}
@@ -164,36 +196,20 @@
     });
   });
 </script>
-{/literal}
-    
-<!-- Twitter Bootstrap -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-<!-- Material Design for Bootstrap -->
-<script type="text/javascript" src="js/material.min.js"></script>
-<script type="text/javascript" src="js/ripples.min.js"></script>
-<script async type="text/javascript">
-  $.material.init();
-</script>
-
-<!-- Dropdown.js -->
-<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+{/literal} 
 {literal}
 <script async type="text/javascript">
-  $("#dropdown-menu select").dropdown();
+    $(document).ready(function() {
+        var opt = $("#RouterName option").sort(function (a,b) { return a.value.toUpperCase().localeCompare(b.value.toUpperCase()) });
+        $("#RouterName").append(opt);
+    });
 </script>
 {/literal}
-    
-<!-- Twitter Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Material Design for Bootstrap -->
-<link href="css/roboto.min.css" rel="stylesheet">
-<link href="css/material-fullpalette.min.css" rel="stylesheet">
-<link href="css/ripples.min.css" rel="stylesheet">
-
-<!-- Dropdown.js -->
-<link href="css/jquery.dropdown.css" rel="stylesheet">
-
-<!-- ex inline css -->
-<link href="css/index.min.css" rel="stylesheet">
+{literal}
+<script async type="text/javascript">
+    $(document).ready(function() {
+        var opt = $("#CommunityName option").sort(function (a,b) { return a.value.toUpperCase().localeCompare(b.value.toUpperCase()) });
+        $("#CommunityName").append(opt);
+    });
+</script>
+{/literal}
