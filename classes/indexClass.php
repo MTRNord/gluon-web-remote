@@ -104,7 +104,7 @@ class main {
 		$ip = main::genV6($nodeName, $communityID);
 		if(!empty($ip)){
 		    if(helper::pingPortOnServer("[".$ip."]","22") == 1){		
-			    $ssh = new Ssh\Configuration("[".$ip."]");
+			    $ssh = new Ssh\Configuration($ip);
 			    $authentication = new Ssh\Authentication\Password($user, $password);		
 			    $session = new Ssh\Session($ssh, $authentication);
 			    $exec = $session->getExec();
