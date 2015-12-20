@@ -45,7 +45,8 @@ class main {
     		        }else{}
 		        }else{
 		            if($nodes->nodeinfo->hostname == $nodeName){
-        		        $nodeMAC = $nodes->nodeinfo->network->mac;
+		            	$nodeMAC = "FIX";
+        		        //$nodeMAC = $nodes->nodeinfo->network->mac;
     		        }else{}
 		        }
 		    }
@@ -74,10 +75,20 @@ class main {
 		$prefix = main::getV6Prefix($communityID);
 		
 		$mac_array = explode(":", $mac);
-		if(!empty($mac)){
-			if(!empty($prefix)){
-				$host_id = ":".$mac_array[0].$mac_array[1].":".$mac_array[2]."ff:fe".$mac_array[3].":".$mac_array[4].$mac_array[5];
-				$ipv6 = $prefix."0".$host_id;
+		if ($mac == "FIX") {
+			$nodes_str = file_get_contents("nodes/nodes".$communityID.".json");
+			$json_nodes = json_decode($nodes_str);
+		    	foreach($json_nodes->nodes as $nodes){
+	            		if($nodes->nodeinfo->hostname == $nodeName){
+		            		$ipv6 = $nodes->nodeinfo->hostname->addresses->1;
+    		        	}else{}
+		        }
+		}else{
+			if(!empty($mac)){
+				if(!empty($prefix)){
+					$host_id = ":".$mac_array[0].$mac_array[1].":".$mac_array[2]."ff:fe".$mac_array[3].":".$mac_array[4].$mac_array[5];
+					$ipv6 = $prefix."0".$host_id;
+				}
 			}
 		}
         if(!empty($ipv6)){
