@@ -80,7 +80,7 @@ class main {
 			$json_nodes = json_decode($nodes_str);
 		    	foreach($json_nodes->nodes as $nodes){
 	            		if($nodes->nodeinfo->hostname == $nodeName){
-		            		$ipv6 = $nodes->nodeinfo->hostname->addresses[1];
+		            		$ipv6 = $nodes->nodeinfo->network->addresses[1];
     		        	}else{}
 		        }
 		}else{
