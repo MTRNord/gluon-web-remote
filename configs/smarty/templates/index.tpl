@@ -52,7 +52,7 @@
 			  <p>
 			    <b>Just testing</b> <br/>
 			    {php}
-					main::openConnection("ls -la", "root", "xxxx", "Sylt_1", "FFFL");
+					main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFNORD");
 				{/php}
 			  </p>
             </div>
