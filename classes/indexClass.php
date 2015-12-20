@@ -108,7 +108,7 @@ class main {
 			    $authentication = new Ssh\Authentication\Password($user, $password);		
 			    $session = new Ssh\Session($ssh, $authentication);
 			    $exec = $session->getExec();
-			    echo $exec->run($command);
+			    echo nl2br($exec->run($command));
 		    }else{echo "ERROR!!! SSH IS NOT RUNNING ON ROUTER!!!";}
 		}
 	}
