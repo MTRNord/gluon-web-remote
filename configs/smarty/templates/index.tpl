@@ -34,6 +34,7 @@
           <ul>
             <li class="active withripple" data-target="#welcome">{#welcomeHead#}</li>
             <li class="withripple" data-target="#tests">Tests</li>
+            <li class="withripple" data-target="#tools">Tools</li>
             <li class="withripple" data-target="#addRouter">{#addRouter#}</li>
             <li hidden class="withripple" data-target="#addRouter2">{#addRouter#}</li>
             <li class="withripple" data-target="#login">{#login#}</li>
@@ -43,18 +44,27 @@
           <div class="col-xs-10">
             <div class="well page active" id="welcome">
               <h1 class="header">{#welcomeHead#}</h1>
-                
+
                 <h3>{#abilitysHead#}</h3>
                 <p>{#abilitys#}</p>
             </div>
             <div class="well page" id="tests">
               <h1 class="header">Tests</h1>
-			  <p>
-			    <b>Just testing</b> <br/>
-			    {php}
-					main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFNORD");
-				{/php}
-			  </p>
+			        <p>
+			          <b>Just testing</b> <br/>
+			          {php}
+					        main::openConnection("ls -la", "root", "xxxx", "tarp1", "FFNORD");
+				        {/php}
+			        </p>
+            </div>
+            <div class="well page" id="tools">
+              <h1 class="header">Tools</h1>
+              <p>
+                <b>Some Tools</b> <br/>
+                {php}
+                  main::genV6($nodeName, $communityID);
+                {/php}
+              </p>
             </div>
             <div class="well page" id="login">
                 <h1 class="header">{#login#}</h1>
@@ -107,7 +117,7 @@
   $("#dropdown-menu select").dropdown();
 </script>
 {/literal}
-    
+
 <!-- Twitter Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -196,7 +206,7 @@
     });
   });
 </script>
-{/literal} 
+{/literal}
 {literal}
 <script async type="text/javascript">
     $(document).ready(function() {
