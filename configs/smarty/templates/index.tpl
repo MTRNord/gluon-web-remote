@@ -35,6 +35,8 @@
             <li class="active withripple" data-target="#welcome">{#welcomeHead#}</li>
             <li class="withripple" data-target="#tests">Tests</li>
             <li class="withripple" data-target="#tools">Tools</li>
+            <li hidden class="withripple" data-target="#tools2">Tools</li>
+            <li hidden class="withripple" data-target="#tools3">Tools</li>
             <li class="withripple" data-target="#addRouter">{#addRouter#}</li>
             <li hidden class="withripple" data-target="#addRouter2">{#addRouter#}</li>
             <li class="withripple" data-target="#login">{#login#}</li>
@@ -57,15 +59,7 @@
 				        {/php}
 			        </p>
             </div>
-            <div class="well page" id="tools">
-              <h1 class="header">Tools</h1>
-              <p>
-                <b>Some Tools</b> <br/>
-                {php}
-                  main::genV6($nodeName, $communityID);
-                {/php}
-              </p>
-            </div>
+            {include file="./tools/generateV6.tpl"}
             <div class="well page" id="login">
                 <h1 class="header">{#login#}</h1>
                 {php}
