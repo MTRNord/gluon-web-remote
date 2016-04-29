@@ -32,7 +32,7 @@
 	    },
 	    "FFHL": {
 	        "ccode": "FFHL",
-	    	"name": "Freifunk L&uuml;beck",
+	    	"name": "Freifunk L&Uuml;beck",
 	    	"nodesURL": "https://map.luebeck.freifunk.net/data/nodes.json",
 	    	"v6": "fdef:ffc0:3dd7:",
 	    	"v6mask": "/64",
