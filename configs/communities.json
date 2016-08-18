@@ -3,7 +3,7 @@
 	    "FFKI": {
 	        "ccode": "FFKI",
 		    "name": "Freifunk Kiel",
-		    "nodesURL": "http://map.ffki.de/nodes.json",
+		    "nodesURL": "http://mesh.freifunk.in-kiel.de/data/nodes.json",
 		    "v6": "fda1:384a:74de:",
 		    "v6mask": "/48",
 		    "v4": "10.116.0.0",
