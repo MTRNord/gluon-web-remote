@@ -130,16 +130,6 @@
 	    	"v4mask": "/16",
 	    	"supported": 0
 	    },
-	    "FFFR": {
-	        "ccode": "FFFR",
-	    	"name": "Freifunk Franken",
-	    	"nodesURL": "https://netmon.freifunk-franken.de/routerlist.php",
-	    	"v6": "",
-	    	"v6mask": "/",
-	    	"v4": "10.50.64.0",
-	    	"v4mask": "/21",
-	    	"supported": 0
-	    },
 	    "FFE": {
 	        "ccode": "FFE",
 	    	"name": "Freifunk Essen",
