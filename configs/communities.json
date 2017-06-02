@@ -19,7 +19,7 @@
 	},
 	"FFNORD": {
 		"name": "Freifunk Nord",
-		"nodesURL": "http://mesh.ffnord.net/data/nodes.json",
+		"nodesURL": "http://mesh.freifunknord.de/data/nodes.json",
 		"v6": "2a03:2267:4e6f:7264:",
 		"v6mask": "/64",
 		"v4": "10.187.0.0",
