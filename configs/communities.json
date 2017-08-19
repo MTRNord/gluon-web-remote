@@ -1,7 +1,7 @@
 {
 	"FFKI": {
 		"name": "Freifunk Kiel",
-		"nodesURL": "http://map.ffki.de/nodes.json",
+		"nodesURL": "https://hopglass.freifunk.in-kiel.de/nodes.json",
 		"v6": "fda1:384a:74de:",
 		"v6mask": "/48",
 		"v4": "10.116.0.0",
@@ -10,12 +10,12 @@
 	},
 	"FFFL": {
 		"name": "Freifunk Flensburg",
-		"nodesURL": "http://map.freifunk-flensburg.de/data/nodes.json",
+		"nodesURL": "http://map.freifunk-flensburg.de/hopglass/nodes.json",
 		"v6": "fddf:bf7:10:1:",
 		"v6mask": "/64",
 		"v4": "10.129.0.0",
 		"v4mask": "/16",
-		"supported": 0
+		"supported": 1
 	},
 	"FFNORD": {
 		"name": "Freifunk Nord",
@@ -37,7 +37,7 @@
 	},
 	"FFNW": {
 		"name": "Freifunk Nordwest",
-		"nodesURL": "http://mesh.sjr-ol.de/data/nodes.json",
+		"nodesURL": "http://lk-os01.sn.ffnw.de:4000/nodes.json",
 		"v6": "fd74:fdaa:9dc4:",
 		"v6mask": "/64",
 		"v4": "10.18.0.0",
