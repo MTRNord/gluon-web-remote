@@ -27,7 +27,7 @@
 		"supported": 1
 	},
 	"FFHL": {
-		"name": "Freifunk L&uuml;beck",
+		"name": "Freifunk Lübeck",
 		"nodesURL": "https://map.luebeck.freifunk.net/data/nodes.json",
 		"v6": "fdef:ffc0:3dd7:",
 		"v6mask": "/64",
